@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <script src="https://kit.fontawesome.com/eb75260fb3.js" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="css/base.css"> -->
+  <link rel="stylesheet" href="am.css">
+  <link rel="stylesheet" href="css/base.css">
+  <title>StudStay</title>
+</head>
+<body>
+  <section class="page">
+    <div class="navbar">
+      <nav>
+        <img src="images/logo.jpeg" alt="">
+        <a id="show_sign_form" style="cursor: pointer;"><span id="s1">Get Started</span></a>
+        <a id="show_log_form" style="cursor: pointer;"><span id="s1">Log In</span></a>
+        <a href="#gallery_box"><span id="s1">Gallery</span></a>
+        <a href="manager.html"><span id="s1">Add A Hostel</span></a>
+      </nav>
+      <nav>
+        <a href=""><i class="material-symbols-outlined">favorite</i>My Favourites</a>
+      </nav>
+    </div>
+    <div class="home_box">
+      <section class="search_form_holder">
+        <p id="ph">A Place For Everyone</p>
+        <form class="search_form">
+          <section class="part part1">
+            <div class="input_field">
+              <i class="material-symbols-outlined">location_on</i>
+              <select name="" id="">
+                <option selected hidden value="none">location</option>
+                <option value="">Ayeduase</option>
+                <option value="">Ejisu</option>
+                <option value="">Ayigya</option>
+              </select>
+            </div>
+              <div class="input_field">
+                <i class="material-symbols-outlined">group</i>
+                <select name="" id="">
+                  <option value="">1 in a room</option>
+                  <option value="">2 in a room</option>
+                  <option value="">3 in a room</option>
+                  <option selected hidden value="none">Room Type</option>
+                  <option value="">4 in a room</option>
+                </select>
+            </div>
+          </section>
+          <section class="part part2">
+            <div class="input_field" id="price_box">
+            <!-- <span>Price range</span> -->
+              <div id="num_box">
+                <input type="number" min="1200" step="500" placeholder="min">
+                <p id="pt">
+                  Price
+                  <i style="display: flex;" class="material-symbols-outlined">arrow_range</i>
+                </p>
+                <input type="number" max="10000" step="500" placeholder="max">
+              </div>
+            </div>
+            <button>Search</button>
+          </section>
+        </form>
+      </section>    
+    </div>
+
+    <style>
+      .navbar{
+        width: 93%;
+        padding: 0 10%;
+        min-height: 7vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* background: salmon; */
+      }
+      .navbar nav{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        font-weight: 600;
+      }
+      .navbar nav a{
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        color: black;
+      }
+      .navbar img{
+        /* height: 8vh; */
+        width: 50px;
+      }
+      .home_box{
+        min-height: 80vh;
+        width: 100%;
+        background: skyblue;
+        background-image: url(images/home.jpg);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .home_box img{
+        width: 100%;
+        height: 80vh;
+      }
+    </style>
+
+    <section class="low">
+      <section class="banner">
+        <section id="s2">
+          <div class="banner_swiper swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="box">
+                  <div style="background: #eef0fd;">
+                    <i class="material-symbols-outlined" style="color: #8181e0;">wifi</i>
+                  </div>
+                  <p>Internet Access</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="box">
+                  <div style="background: #fff3eb;">
+                    <i class="material-symbols-outlined" style="color: #dd9a5a;">assured_workload</i>
+                  </div>
+                  <p>Assured Security</p>
+                </div>   
+              </div>
+              <div class="swiper-slide">
+                <div class="box">
+                  <div style="background: #ffeafa;">
+                    <i class="material-symbols-outlined" style="color: #c283a4;">savings</i>
+                  </div>
+                  <p>Affordable Prices</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="box">
+                  <div style="background: #edfef4;">
+                    <i class="material-symbols-outlined" style="color: #569270;">chair</i>
+                  </div>
+                  <p>Common Areas</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="box">
+                  <div style="background: #eef0fd;">
+                    <i class="material-symbols-outlined" style="color: #8181e0;">wifi</i>
+                  </div>
+                  <p>Internet Access</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="box">
+                  <div style="background: #fff3eb;">
+                    <i class="material-symbols-outlined" style="color: #dd9a5a;">assured_workload</i>
+                  </div>
+                  <p>Assured Security</p>
+                </div>   
+              </div>
+              <div class="swiper-slide">
+                <div class="box">
+                  <div style="background: #ffeafa;">
+                    <i class="material-symbols-outlined" style="color: #c283a4;">savings</i>
+                  </div>
+                  <p>Affordable Prices</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="box">
+                  <div style="background: #edfef4;">
+                    <i class="material-symbols-outlined" style="color: #569270;">chair</i>
+                  </div>
+                  <p>Common Areas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <section class="explore_box">
+      <section class="explore">
+        <div class="ex_left">
+          <div class="con">
+            <p id="ph">Choose From The Best Rooms A Campus Could Offer</p>
+            <span>Looking for a comfortable and affordable place to stay while you explore the city?</span>
+            <a href="">Explore</a>
+          </div>
+        </div>
+        <div class="ex_right"></div>
+      </section>
+    </section>
+
+
+    <section class="show_box" data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000">
+      <div class="show_swiper swiper show1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div  class="h_card">
+              <p id="h_card_pin">
+                <span>Ayeduase</span>
+                <i class="material-symbols-outlined">pin_drop</i>
+              </p>
+              <p id="h_card_ratings">
+                <i class="material-symbols-outlined">star</i>
+                <span>4.1</span>
+              </p>
+              <a href="" class="link_box">
+                <div id="link"><p><i class="material-symbols-outlined">book</i> Book Now  </p></div>
+                <img src="images/home.jpg" alt="">
+              </a>
+              <div class="h_card_info">
+                <p>
+                  <span id="s1">Glory Heights,</span>
+                  <span>Kumasi</span>
+                </p>
+                <i id="h_card_like" class="fa-regular fa-heart"></i>
+                <p>
+                  <span id="s1">Ghc 6,000</span>
+                  <span>2 in room</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div  class="h_card">
+              <p id="h_card_pin">
+                <span>Ayeduase</span>
+                <i class="material-symbols-outlined">pin_drop</i>
+              </p>
+              <p id="h_card_ratings">
+                <i class="material-symbols-outlined">star</i>
+                <span>4.1</span>
+              </p>
+              <a href="" class="link_box">
+                <div id="link"><p><i class="material-symbols-outlined">book</i> Book Now  </p></div>
+                <img src="images/gall.avif" alt="">
+              </a>
+              <div class="h_card_info">
+                <p>
+                  <span id="s1">Glory Heights,</span>
+                  <span>Kumasi</span>
+                </p>
+                <i id="h_card_like" class="fa-regular fa-heart"></i>
+                <p>
+                  <span id="s1">Ghc 6,000</span>
+                  <span>2 in room</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div  class="h_card">
+              <p id="h_card_pin">
+                <span>Ayeduase</span>
+                <i class="material-symbols-outlined">pin_drop</i>
+              </p>
+              <p id="h_card_ratings">
+                <i class="material-symbols-outlined">star</i>
+                <span>4.1</span>
+              </p>
+              <a href="" class="link_box">
+                <div id="link"><p><i class="material-symbols-outlined">book</i> Book Now  </p></div>
+                <img src="images/gall7.avif" alt="">
+              </a>
+              <div class="h_card_info">
+                <p>
+                  <span id="s1">Glory Heights,</span>
+                  <span>Kumasi</span>
+                </p>
+                <i id="h_card_like" class="fa-regular fa-heart"></i>
+                <p>
+                  <span id="s1">Ghc 6,000</span>
+                  <span>2 in room</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div  class="h_card">
+              <p id="h_card_pin">
+                <span>Ayeduase</span>
+                <i class="material-symbols-outlined">pin_drop</i>
+              </p>
+              <p id="h_card_ratings">
+                <i class="material-symbols-outlined">star</i>
+                <span>4.1</span>
+              </p>
+              <a href="" class="link_box">
+                <div id="link"><p><i class="material-symbols-outlined">book</i> Book Now  </p></div>
+                <img src="images/gall2.avif" alt="">
+              </a>
+              <div class="h_card_info">
+                <p>
+                  <span id="s1">Glory Heights,</span>
+                  <span>Kumasi</span>
+                </p>
+                <i id="h_card_like" class="fa-regular fa-heart"></i>
+                <p>
+                  <span id="s1">Ghc 6,000</span>
+                  <span>2 in room</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div  class="h_card">
+              <p id="h_card_pin">
+                <span>Ayeduase</span>
+                <i class="material-symbols-outlined">pin_drop</i>
+              </p>
+              <p id="h_card_ratings">
+                <i class="material-symbols-outlined">star</i>
+                <span>4.1</span>
+              </p>
+              <a href="" class="link_box">
+                <div id="link"><p><i class="material-symbols-outlined">book</i> Book Now  </p></div>
+                <img src="images/gall2.avif" alt="">
+              </a>
+              <div class="h_card_info">
+                <p>
+                  <span id="s1">Glory Heights,</span>
+                  <span>Kumasi</span>
+                </p>
+                <i id="h_card_like" class="fa-regular fa-heart"></i>
+                <p>
+                  <span id="s1">Ghc 6,000</span>
+                  <span>2 in room</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .show_box{
+        min-height: 52vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        /* background: #f7f7f7; */
+        padding: 2% 0;
+        justify-content: center;
+      }
+      .show_swiper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+      .show_swiper .swiper-slide{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+    <section class="footer" data-aos="fade-right" data-aos-duration="1000">
+      <section class="f_left">
+        <section class="f_left_con">
+          <div id="p1">Contact</div>
+          <section>
+            <p>
+              <span id="p1" style="margin-bottom: 5px;">Ashanti Region</span>
+              <span id="s2">P.O.BOX 4341</span>
+              <span id="s2">Mangoase</span>
+            </p>
+            <p>
+              <span id="p1" style="margin-bottom: 5px;">Greater Accra</span>
+              <span id="s2">P.O.BOX 4341</span>
+              <span id="s2">Tema</span>
+            </p>
+          </section>
+          <div>
+            <span id="p1">Follow us</span>
+            <nav>
+              <a id="lna" href=""><i class="fa-brands fa-twitter"></i></a>
+              <a id="lna" href=""><i class="fa-brands fa-facebook-f"></i></a>
+              <a id="lna" href=""><i class="fa-brands fa-instagram"></i></a>
+            </nav>
+          </div>
+        </section>
+      </section>
+      <section class="f_left">
+        <section class="f_left_con">
+          <div id="p1">Services</div>
+          <section>
+            <p>
+              <span id="p1" style="margin-bottom: 5px;">By platform</span>
+              <span id="s2">Accomodation</span>
+              <span id="s2">Linen and bedding</span>
+              <span id="s2">Kitchen facilities</span>
+              <span id="s2">Common areas</span>
+              <span id="s2">Wi-fi</span>
+              <span id="s2">Lockers</span>
+            </p>
+            <p>
+              <span id="p1" style="margin-bottom: 5px;">Add-ons</span>
+              <span id="s2">Laundry facilities</span>
+              <span id="s2">Shuttle services</span>
+              <span id="s2">Event and activities</span>
+            </p>
+          </section>
+        </section>
+      </section>
+    </section>
+
+    <style>
+      :root{
+      --footer-background:rgb(32, 20, 20);
+      }
+      .footer{
+        background: #222222;
+        background: #0098be;
+        width: 100%;
+        padding: 2% 0;
+        display: flex;
+        color: white;
+        background:
+          linear-gradient(55deg, var(--footer-background) 5px, transparent 0) 0px 5px,
+          linear-gradient(-55deg, var(--footer-background) 5px, #fff 0) 0px 5px;
+        background-color: var(--footer-background);
+        background-position: right top;
+        background-repeat: repeat-x;
+        background-size: 10px 10px;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        /* border: 1px solid white; */
+        gap: 6%;
+      }
+      .footer .f_left{
+        display: flex;
+      }
+      .footer .f_left_con{
+        display: flex;
+        flex-direction: column;
+      }
+      .footer .f_left, .footer div p{
+        display: flex;
+        justify-content: center;
+      }
+      .footer .f_left{
+        align-items: flex-end;
+      }
+      .footer .f_left .f_left_con section{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 30px;
+      }
+      .footer .f_left section p,.footer .f_left div{
+        display: flex;
+        flex-direction: column;
+      }
+      .footer .f_left .f_left_con{
+        gap: 20px;
+      }
+      .footer .f_left div nav{
+        display: flex;
+        gap: 15px;
+        color: white;
+      }
+      .footer .f_left div nav a{
+        font-size: 1.1rem;
+        color: white;
+      }
+      .footer .f_left #p1{
+        font-weight: 600;
+      }
+
+    </style>
+
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="js/swiper.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
