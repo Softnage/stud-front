@@ -33,6 +33,140 @@
 }
 
 
+.nav{
+  width: 100%;
+  min-height: 14.94vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #ebebeb;
+  /* background: #ddf8ff; */
+}
+.nav img{
+  width:80px; 
+  height:80px;
+  /* border: 1px solid gold; */
+}
+.nav .user_box{
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  border-left: 1px dotted darkgray;
+  padding: 10px;
+}
+.nav .user_box img{
+  width:50px; 
+  height:50px; 
+  border-radius: 50%;
+}
+.nav .user_box p{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.search_form{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8vh;
+  width: 50%;
+  padding: 5px;
+  background: white;
+}
+.search_form .input_field{
+  padding: 5px 15px;
+  display: flex;
+  gap: 7px;
+  flex-direction: column;
+  align-items: center;
+}
+.search_form span{
+  color: rgb(102, 102, 102);
+}
+.search_form input{
+  padding: 3px;
+  border-bottom: 1px solid darkgray;
+  width: 200px;
+}
+.search_form button{
+  background: transparent;
+  color: orange;
+}
+.search_form hr{
+  border-left: 1px dotted black;
+  height: 90%;
+}
+#searchTab{
+  display: none;
+}
+@media all and (max-width:1300px){
+  .search_form{
+    width: 60%;
+  }
+}
+@media all and (max-width:1220px){
+  .search_form input{
+    width: auto;
+  }
+  .nav{
+    min-height: auto;
+    padding: 10px 0;
+  }
+  #searchTab{
+    display: flex;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: #0098be;
+    color: white;
+    padding: 5px;
+    z-index: 100;
+
+  }
+  .search_form{
+    z-index: 50;
+    border-radius: 0;
+    top: -350px;
+    position: fixed;
+    width: auto;
+    height: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    transition: 0.5s ease;
+  }
+  .search_form.change{
+    top: 0;
+  }
+  .search_form .input_field{
+    align-items: flex-start;
+    border-bottom: 1px dotted darkgray;
+  }
+}
+@media all and (max-width:530px){
+  /* .search_form{
+    left: 0;
+    top: 0;
+  } */
+  .nav img{
+    width:50px; 
+    height:50px;
+  }
+  .nav{
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .nav .user_box{
+    display: none;
+    border: none;
+  }
+  .low .main .h_card{
+    width: 75%;
+  }
+}
 
 
 .h_card{

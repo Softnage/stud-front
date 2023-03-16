@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/eb75260fb3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="css/base.css">
+  <title>Document</title>
+</head>
+<body>
+  <section class="page">
+      <section class="sideBar">
+        <i id="sideBar_tag" class="material-symbols-outlined">widgets</i>
+        <section class="s_header">
+          <a href="index.html">
+            <img src="images/logo.jpeg" alt="" width="80px" height="80px">
+          </a>
+          <p>
+            <span id="s1" style="font-family: 'Poppins',sans-serif;">Hi  A-Mole</span>
+            <span id="s2">Dashboard</span>
+          </p>
+        </section>
+        <section class="s_main">
+          <nav>
+            <a href=""><i class="material-symbols-outlined">space_dashboard</i><span>Dashboard</span></a>
+            <a href=""><i class="material-symbols-outlined">beenhere</i><span>Bookings</span></a>
+            <a href=""><i class="material-symbols-outlined">star</i><span>Favorites</span></a>
+            <a href=""><i class="material-symbols-outlined">notifications</i><span>Notifications</span></a>
+            <a href=""><i class="material-symbols-outlined">settings</i><span>Settings</span></a>
+          </nav>
+        </section>
+        <section class="s_low">
+          <a href=""><i class="material-symbols-outlined">logout</i><span>Logout</span></a>
+        </section>
+      </section>
+      <section class="main">
+        <section class="cover_photo">
+          <label id="cp_label" for="change_cp">Cover Photo</label>
+          <input type="file" id="change_cp" accept="image/*" style="display: none;">
+          <div class="cp_cover"></div>
+          <style>
+            #cp_label{
+              position: absolute;
+              top: 0;
+              left: 0;
+              padding: 5px;
+              z-index: 10;
+              color: white;
+              background: skyblue;
+            }
+            .cp_cover{
+              display: none;
+              background: rgba(0, 0, 0, 0.5);
+              width: 100%;
+              min-height: 100%;
+              position: absolute;
+            }
+          </style>
+          <div class="pp_box">
+            <img id="pp" src="images/home.jpg" alt="" />
+            <label for="change_pp">Profile Photo</label>
+            <input type="file" id="change_pp" accept="image/*" style="display: none;">
+          </div>
+        </section>
+        <section class="profile_box">
+          <form class="profile_form">
+            <div class="input_field span-2">
+              <span>Username</span>
+              <input type="text">
+            </div>
+            <div class="input_field">
+              <span>Email</span>
+              <input type="text">
+            </div>
+            <div class="input_field">
+              <span>Phone</span>
+              <input type="text">
+            </div>
+            <div class="input_field span-2">
+              <span>Program</span>
+              <input type="text">
+            </div>
+            <div class="input_field">
+              <button>Update</button>
+            </div>
+          </form>
+        </section>
+      </section>
+      <style>
+        .profile_box{
+          width: 100%;
+          /* background: skyblue; */
+          min-height: 70vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .profile_form .input_field{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          gap: 3px;
+          /* border: 5px solid gold; */
+        }
+        .profile_form .input_field span{
+          font-weight: 600;
+          color: #a2a2a2;
+          font-size: 0.8rem;
+        }
+        .profile_form .input_field input{
+          width: 95%;
+          padding: 0 10px;
+          height: 40px;
+          background: #f7f7f7;
+          border: 1px solid transparent;
+          transition: 0.2s ease;
+        }
+        .profile_form .input_field input:hover{
+          border: 1px solid #c5c5c5;
+          background: transparent;
+        }
+        .span-2{
+          grid-column: span 2;
+        }
+        .profile_form{
+          display: grid;
+          align-items: center;
+          gap: 2rem;
+          grid-template-columns: 1fr 1fr;
+          width: 40%;
+          background: white;
+          padding: 20px;
+          border-radius: 15px;
+        }
+        .profile_form .input_field button{
+          background: #3f28e3;
+          color: white;
+          padding: 10px;
+          border: 1px solid transparent;
+          /* border-radius: 10px; */
+          transition: 0.3s ease;
+        }
+        .profile_form .input_field button:hover{
+          background: white;
+          border: 1px dotted #3f28e3;
+          color: #3f28e3;
+        }
+
+        .cover_photo{
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 30vh;
+          width: 100%;
+          background-image: url(images/florida.webp);
+          background-position: center;
+          background-size: cover;
+        }
+        .cover_photo .pp_box{
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          bottom: -100px;
+          left: 10%;
+          z-index: 10;
+        }
+        .cover_photo #pp{
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+        }
+        .cover_photo .pp_box label{
+          background: skyblue;
+          color: white;
+          padding: 5px;
+          font-size: 0.9rem;
+        }
+        
+        @media all and (max-width:1150px){
+          .cp_cover{
+            display: flex;
+          }
+          .cover_photo .pp_box{
+            position: revert;
+          }
+          .cover_photo .pp_box label{
+            background: white;
+            color: black;
+          }
+          .profile_form{
+            width: 80%;
+          }
+        }  
+        @media all and (max-width:700px){
+          .profile_form{
+            /* border: 1px solid black; */
+            grid-template-columns: 1fr 1fr;
+          }
+          .profile_form .input_field{
+            grid-column: span 2;
+          }
+        }      
+      </style>
+    </section>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
+  <script>
+    const inp = document.getElementById('change_pp')
+    const pic_box = document.getElementById('pp')
+    if (inp) { 
+      inp.onchange =()=> {
+        const [file] = inp.files
+        pic_box.src = URL.createObjectURL(file)
+      }
+    }
+
+    const inp_2 = document.getElementById('change_cp')
+    const cover_photo = document.querySelector('.cover_photo')
+    if (inp_2) { 
+      inp_2.onchange =()=> {
+        const [file] = inp_2.files
+        var src = URL.createObjectURL(file)
+        cover_photo.style.backgroundImage = `url(${src})`
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+<style>
+  .page{
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .sideBar{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    border-right: 1px solid #ebebeb;
+    transition: 0.3s ease;
+  }
+  .sideBar #sideBar_tag{
+    background: white;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    cursor: pointer;
+    right: 0;
+    color: darkgray;
+    transition: 0.4s ease;
+  }
+  
+  .sideBar #sideBar_tag.change{
+    position: relative;
+    min-height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sideBar .s_header,.sideBar .s_main, .sideBar .s_low{
+    width: 100%;
+  }
+  .sideBar .s_header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 15vh;
+  }
+  .sideBar .s_header p{
+    display: flex;
+    flex-direction: column;
+  }
+  .sideBar .s_header p #s2{
+    color: darkgray;
+  }
+
+  .sideBar .s_main{
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .sideBar .s_main nav{
+    min-height: 40vh;
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sideBar .s_main nav a{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+  }
+
+  .sideBar .s_low{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 15vh;
+  }
+  .sideBar .s_low a{
+    display: flex;
+    align-items: center;
+  }
+  .main{
+    width: 80%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease;
+  }
+
+  .main.change{
+    width: 95%;
+  }
+
+  .sideBar.change{
+    width: 5%;
+  }
+  .sideBar.change .s_header{
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    min-height: 20vh;
+  }
+  .sideBar.change .s_header p span{
+    font-size: 0.8vw;
+  }
+  .sideBar.change .s_main{
+    min-height: 65vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .sideBar.change .s_main nav{
+    width: 100%;
+    align-items: center;
+  }
+  .sideBar.change .s_main nav a{
+    justify-content: center;
+  }
+  .sideBar.change .s_main nav a span{
+    display: none;
+  }
+  .sideBar.change .s_low a span{
+    display: none;
+  }
+  .sideBar.change .s_low{
+    min-height: 10vh;
+  }
+
+
+  @media all and (max-width:1300px){
+    .sideBar{
+      top: 0;
+      left: -120%;
+      width: 100%;
+      background: white;
+      position: fixed;
+      z-index:20;
+      transition: 0.8s ease;
+      padding: 0 15px;
+    }
+    .sideBar .s_main{
+      align-items: center;
+    }
+    .sideBar .s_main nav{
+      width: auto;
+    }
+    .sideBar .s_main nav a{
+      width: 100%;
+    }
+    .sideBar.show{
+      left: 0;
+    }
+    .sideBar #sideBar_tag{
+      position: fixed;
+    }
+    .main{
+      width: 100%;
+    }
+  }
+</style>

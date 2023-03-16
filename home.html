@@ -15,12 +15,45 @@
 <body>
   <section class="page">
     <button id="home_menu_tag" class="material-symbols-outlined">menu</button>
-    <section class="top">
-      <img src="images/logo black.png" alt="">
-      <form class="search_box">
-        <button type="submit" class="material-symbols-outlined">search</button>
-        <input type="text" name="search">
-        <i class="material-symbols-outlined">cancel</i>
+    <nav class="nav">
+      <button class="material-symbols-outlined" id="searchTab">search</button>
+      <img src="images/logo.jpeg" alt="" width="150px" height="100px">
+      <form class="search_form">
+        <div class="input_field">
+          <span>Name</span>
+          <input type="text">
+        </div>
+        <hr>
+        <div class="input_field">
+          <span>University/Campus/College</span>
+          <select name="" id="">
+            <option value="">Ayeduase</option>
+            <option value="">Ejisu</option>
+            <option value="">Asafo</option>
+          </select>
+        </div>
+        <hr>
+        <div class="input_field">
+          <span>Location</span>
+          <select name="" id="">
+            <option value="">Ayeduase</option>
+            <option value="">Ejisu</option>
+            <option value="">Asafo</option>
+          </select>
+        </div>
+        <hr>
+        <div class="input_field">
+          <span>Ratings</span>
+          <select name="" id="">
+            <option value="">3+</option>
+            <option value="">4+</option>
+            <option value="">4.5+</option>
+          </select>
+        </div>
+        <hr>
+        <div class="input_field">
+          <button class="material-symbols-outlined">search</button>
+        </div>
       </form>
       <a class="user_box" href="dashboard.html">  
         <img src="images/hostel.webp" alt="">
@@ -29,7 +62,7 @@
           <span>Omar</span>
         </p>
       </a>
-    </section>
+    </nav>
     <section class="low">
       <section class="sideBar">
         <section>
@@ -340,6 +373,7 @@
     </section>
   </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/swiper.js"></script>
   <script>
     const h_card = document.querySelectorAll('.h_card')
     for (let i = 0; i < h_card.length; i++) {
@@ -421,13 +455,15 @@
     width: 100%;
     min-height: 85vh;
     display: flex;
+    justify-content: flex-end;
     align-items: flex-start;
   }
   .low .sideBar{
     width: 20%;
-    /* top: 0;
-    position: sticky; */
-    min-height: 85vh;
+    position: fixed;
+    left: 0;
+    /* min-height: 85vh; */
+    height: 85vh;
     overflow-y: auto;
     border-right: 1px solid #ebebeb;
   }

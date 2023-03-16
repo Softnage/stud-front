@@ -23,8 +23,9 @@
 </head>
 <body>
   <section class="page">
-    <section class="top">
+    <section class="nav">
       <img src="images/logo.jpeg" alt="">
+      <button class="material-symbols-outlined" id="searchTab">search</button>
       <form class="search_form">
         <div class="input_field">
           <span>Name</span>
@@ -62,11 +63,6 @@
           <button class="material-symbols-outlined">search</button>
         </div>
       </form>
-      <!-- <form class="search_box">
-        <button type="submit" class="material-symbols-outlined">search</button>
-        <input type="text" name="search">
-        <i class="material-symbols-outlined">cancel</i>
-      </form> -->
       <a class="user_box" href="dashboard.html">  
         <img src="images/hostel.webp" alt="">
         <p>
@@ -150,7 +146,6 @@
             display: flex;
             transition: 0.5s ease;
             flex-direction: column;
-            /* border: 2px solid goldenrod; */
           }
           .book_box .b_top{
             width: 100%;
@@ -160,7 +155,6 @@
           .book_box .b_top #p1{
             display: flex;
             flex-direction: column;
-            /* border: 1px solid black; */
             padding: 5px;
           }
           .book_box .b_top #p1 #title{
@@ -171,7 +165,6 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            /* border: 1px solid gold; */
             padding: 3px;
           }
           .book_box .b_top #p2 p{
@@ -180,25 +173,28 @@
           }
           .book_box .b_main{
             width: 100%;
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
             min-height: 50vh;
+            margin-bottom: 10px;
+            gap: 0.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
           }
           .book_box .b_main .left, .book_box .b_main .right{
-            width: 49.5%;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            display: grid;
+          }
+          .book_box .b_main .left{
+            grid-template-columns: 1fr;
+          }
+          .book_box .b_main .right{
+            gap: 0.5rem;
+            grid-template-columns: repeat(2, 1fr);
+          }
+          .book_box .b_main .right .r_box{
+            height: 25vh;
           }
           .book_box .b_main img{
             width: 100%;
             height: 100%;
-          }
-          .book_box .b_main .right .r_box{
-            width: 49%;
-            background: salmon;
-            height: 24vh;
           }
           .book_box .b_low{
             width: 100%;
@@ -240,15 +236,13 @@
               width: 80%;
             }
             .book_box .b_main{
+              display: flex;
               flex-direction: column;
               align-items: center;
               gap: 10px;
-              /* min-height: 10vh; */
-              /* border: 2px solid skyblue; */
             }
             .book_box .b_main .left,.book_box .b_main .right{
               width: 100%;
-              /* border: 2px solid red; */
             }
             .book_box .b_main .left img{
               height: 40vh;
@@ -267,7 +261,6 @@
             .book_box .b_top{
               align-items: center;
               flex-direction: column;
-              /* border: 2px solid skyblue; */
               font-size: 0.8rem;
               text-align: center;
             }
@@ -295,6 +288,7 @@
     </section>
   </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/swiper.js"></script>
   <script>
     const h_card = document.querySelectorAll('.h_card')
     for (let i = 0; i < h_card.length; i++) {
@@ -313,93 +307,7 @@
 </html>
 
 <style>
-  .top{
-    width: 100%;
-    min-height: 14.94vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-bottom: 1px solid #ebebeb;
-  }
-  .top img{
-    width:120px; 
-    height:100px;
-  }
-  .top .search_box{
-    display: flex;
-    align-items: center;
-    padding: 2px 5px;
-    border-radius: 20px;
-    border: 1px solid #ebebeb;
-  }
-  .top .search_box button{
-    color: #ebebeb;
-    background: transparent;
-  }
-  .top .search_box input{
-    width: 200px;
-    padding: 6px;
-  }
-  .top .search_box i{
-    background: whitesmoke;
-    border-radius: 50%;
-    color: #ebebeb;
-  }
-  .search_form{
-      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-      /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
-      /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
-      border-radius: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      height: 8vh;
-      width: 50%;
-      padding: 5px;
-      background: white;
-      border: 1px solid #ebebeb;
-    }
-    .search_form .input_field{
-      /* border: 1px solid black; */
-      padding: 5px 15px;
-      display: flex;
-      gap: 7px;
-      flex-direction: column;
-      align-items: center;
-    }
-    .search_form span{
-      color: rgb(102, 102, 102);
-    }
-    .search_form input{
-      padding: 3px;
-      border-bottom: 1px solid darkgray;
-      width: 200px;
-    }
-    .search_form button{
-      background: transparent;
-      color: orange;
-    }
-    .search_form hr{
-      border-left: 1px dotted black;
-      height: 90%;
-    }
-  .top .user_box{
-    align-items: center;
-    display: flex;
-    gap: 10px;
-    border-left: 1px dotted darkgray;
-    padding: 10px;
-  }
-  .top .user_box img{
-    width:50px; 
-    height:50px; 
-    border-radius: 50%;
-  }
-  .top .user_box p{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+  
   .low{
     width: 100%;
     min-height: 85vh;
@@ -414,21 +322,5 @@
     overflow-y: auto;
     flex-wrap: wrap;
   }
-  @media all and (max-width:530px){
-    .top img{
-      width:50px; 
-      height:50px;
-    }
-    .top{
-      justify-content: flex-start;
-      flex-direction: column;
-    }
-    .top .user_box{
-      display: none;
-      border: none;
-    }
-    .low .main .h_card{
-      width: 75%;
-    }
-  }
+  
 </style>

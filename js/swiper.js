@@ -1,11 +1,13 @@
-var home_swiper = new Swiper('.home_swiper', {
-  direction: 'horizontal',
-  loop: true,
-  speed: 1500,
-  autoplay:{
-    delay : 4000
-  },
-});
+if(document.querySelector('.home_swiper')){
+  var home_swiper = new Swiper('.home_swiper', {
+    direction: 'horizontal',
+    loop: true,
+    speed: 1500,
+    autoplay:{
+      delay : 4000
+    },
+  });
+}
 
 window.onresize =()=>{
   var winWidth =  window.innerWidth
@@ -51,7 +53,7 @@ const makeBannerSwiper =(min)=>{
 }
 
 const menu_tag = document.getElementById('menu_tag')
-const search_form = document.querySelector('.search_form')
+// const search_form = document.querySelector('.search_form')
 const home_swiper_nav = document.querySelector('.home_swiper_nav')
 const handleMenu =(min)=>{
   if(min < 501){
@@ -178,10 +180,20 @@ const makeHotelSwiper =(min)=>{
   }
 }
 
+if(document.querySelector('.top_pick_swiper')){
+  var top_pick_swiper = new Swiper('.top_pick_swiper', {
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {delay : 3000},
+    speed:1000,
+  });
+}
 
-var top_pick_swiper = new Swiper('.top_pick_swiper', {
-  direction: 'horizontal',
-  loop: true,
-  autoplay: {delay : 3000},
-  speed:1000,
-});
+
+const searchTab = document.getElementById('searchTab')
+const search_form = document.querySelector('.search_form')
+if(searchTab){
+  searchTab.onclick =()=>{
+    search_form.classList.toggle('change')
+  }
+}

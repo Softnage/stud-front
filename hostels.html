@@ -10,7 +10,8 @@
 </head>
 <body>
   <section class="page">
-    <nav class="top">
+    <nav class="nav">
+      <button class="material-symbols-outlined" id="searchTab">search</button>
       <img src="images/logo.jpeg" alt="" width="150px" height="100px">
       <form class="search_form">
         <div class="input_field">
@@ -57,76 +58,6 @@
         </p>
       </a>
     </nav>
-  <style>
-    .top{
-      width: 100%;
-      min-height: 14.94vh;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      /* background: #e8faff; */
-      /* background: #0098be; */
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    }
-    .top img{
-      width:120px; 
-      height:100px;
-    }
-    .top .user_box{
-      align-items: center;
-      display: flex;
-      gap: 10px;
-      border-left: 1px dotted darkgray;
-      padding: 10px;
-    }
-    .top .user_box img{
-      width:50px; 
-      height:50px; 
-      border-radius: 50%;
-    }
-    .top .user_box p{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .search_form{
-      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-      border-radius: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      height: 8vh;
-      width: 50%;
-      padding: 5px;
-      background: white;
-    }
-    .search_form .input_field{
-      padding: 5px 15px;
-      display: flex;
-      gap: 7px;
-      flex-direction: column;
-      align-items: center;
-    }
-    .search_form span{
-      color: rgb(102, 102, 102);
-    }
-    .search_form input{
-      padding: 3px;
-      border-bottom: 1px solid darkgray;
-      width: 200px;
-    }
-    .search_form button{
-      background: transparent;
-      color: orange;
-    }
-    .search_form hr{
-      border-left: 1px dotted black;
-      height: 90%;
-    }
-    
-
-  </style>
 
     <a href="" class="hos_card">
       <img src="images/hosr.jpg" alt="">
@@ -291,6 +222,7 @@
   </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/swiper.js"></script>
   <script>
     const lna = document.querySelectorAll('.hos_card')
      for (let i = 0; i < lna.length+1; i++) {
