@@ -33,6 +33,8 @@
 }
 
 
+
+
 .h_card{
   border-radius: 10px;
   position: relative;
@@ -136,3 +138,61 @@
   position: relative;
   /* border: 10px solid salmon; */
 }
+
+.hos_con{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hos_con #sh{
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 600;
+  border-bottom: 1px solid darkgray;
+}
+.hos_con p{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+.hos_con .con{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.hos_con .con button{
+  background: #0098be;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+}
+.hos_card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  min-height: 380px;
+  color: black;
+  transition: 0.3s ease;
+  
+}
+.hos_card:hover{
+  transform: translateY(-20px);
+}
+.hos_card img{
+  border-radius: 10px;
+  min-height: 330px;
+  width: 100%;
+}
+.hos_card .hos_con{
+  width: 85%;
+  background: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+
+

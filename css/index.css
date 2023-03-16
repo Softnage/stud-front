@@ -160,9 +160,9 @@
 }
 .search_form .part{
   display: flex;
-  margin: 0 2px;
+  /* margin: 0 1px; */
   background: white;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
 }
 .part1{
   gap: 10px;
@@ -331,7 +331,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5% 0;
+  padding: 5% 0 0 0;
   /* background: #f7f7f7; */
 }
 .explore{

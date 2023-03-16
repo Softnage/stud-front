@@ -10,219 +10,313 @@
 </head>
 <body>
   <section class="page">
+    <nav class="top">
+      <img src="images/logo.jpeg" alt="" width="150px" height="100px">
+      <form class="search_form">
+        <div class="input_field">
+          <span>Name</span>
+          <input type="text">
+        </div>
+        <hr>
+        <div class="input_field">
+          <span>University/Campus/College</span>
+          <select name="" id="">
+            <option value="">Ayeduase</option>
+            <option value="">Ejisu</option>
+            <option value="">Asafo</option>
+          </select>
+        </div>
+        <hr>
+        <div class="input_field">
+          <span>Location</span>
+          <select name="" id="">
+            <option value="">Ayeduase</option>
+            <option value="">Ejisu</option>
+            <option value="">Asafo</option>
+          </select>
+        </div>
+        <hr>
+        <div class="input_field">
+          <span>Ratings</span>
+          <select name="" id="">
+            <option value="">3+</option>
+            <option value="">4+</option>
+            <option value="">4.5+</option>
+          </select>
+        </div>
+        <hr>
+        <div class="input_field">
+          <button class="material-symbols-outlined">search</button>
+        </div>
+      </form>
+      <a class="user_box" href="dashboard.html">  
+        <img src="images/hostel.webp" alt="">
+        <p>
+          <span>Hi</span>
+          <span>Omar</span>
+        </p>
+      </a>
+    </nav>
+  <style>
+    .top{
+      width: 100%;
+      min-height: 14.94vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      /* background: #e8faff; */
+      /* background: #0098be; */
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    .top img{
+      width:120px; 
+      height:100px;
+    }
+    .top .user_box{
+      align-items: center;
+      display: flex;
+      gap: 10px;
+      border-left: 1px dotted darkgray;
+      padding: 10px;
+    }
+    .top .user_box img{
+      width:50px; 
+      height:50px; 
+      border-radius: 50%;
+    }
+    .top .user_box p{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .search_form{
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 8vh;
+      width: 50%;
+      padding: 5px;
+      background: white;
+    }
+    .search_form .input_field{
+      padding: 5px 15px;
+      display: flex;
+      gap: 7px;
+      flex-direction: column;
+      align-items: center;
+    }
+    .search_form span{
+      color: rgb(102, 102, 102);
+    }
+    .search_form input{
+      padding: 3px;
+      border-bottom: 1px solid darkgray;
+      width: 200px;
+    }
+    .search_form button{
+      background: transparent;
+      color: orange;
+    }
+    .search_form hr{
+      border-left: 1px dotted black;
+      height: 90%;
+    }
     
-    <div class="hos_card">
-      <img src="images/hosr.jpg" alt="">
-      <div class="hos_con">
-        <span id="sh">Glory Heights</span>
-        <div class="con">
-          <p>
-            <i class="material-symbols-outlined" style="color: salmon;">location_on</i>
-            <span>Ayeduase</span>
-          </p>
-          <span>P.O.BOX 4341</span>
-        </div>
-        <div class="con">
-          <p>
-            <i class="material-symbols-outlined" style="color: skyblue;">star</i>
-            <span>4.3</span>
-          </p>
-          <button>View</button>
-        </div>
-      </div>
-    </div>
-    <div class="hos_card">
-      <img src="images/hosr.jpg" alt="">
-      <div class="hos_con">
-        <span id="sh">Glory Heights</span>
-        <div class="con">
-          <p>
-            <i class="material-symbols-outlined" style="color: salmon;">location_on</i>
-            <span>Ayeduase</span>
-          </p>
-          <span>P.O.BOX 4341</span>
-        </div>
-        <div class="con">
-          <p>
-            <i class="material-symbols-outlined" style="color: skyblue;">star</i>
-            <span>4.3</span>
-          </p>
-          <button>View</button>
-        </div>
-      </div>
-    </div>
-    <div class="hos_card">
-      <img src="images/hosr.jpg" alt="">
-      <div class="hos_con">
-        <span id="sh">Glory Heights</span>
-        <div class="con">
-          <p>
-            <i class="material-symbols-outlined" style="color: salmon;">location_on</i>
-            <span>Ayeduase</span>
-          </p>
-          <span>P.O.BOX 4341</span>
-        </div>
-        <div class="con">
-          <p>
-            <i class="material-symbols-outlined" style="color: skyblue;">star</i>
-            <span>4.3</span>
-          </p>
-          <button>View</button>
-        </div>
-      </div>
-    </div>
-    <div class="hos_card">
-      <img src="images/hosr.jpg" alt="">
-      <div class="hos_con">
-        <span id="sh">Glory Heights</span>
-        <div class="con">
-          <p>
-            <i class="material-symbols-outlined" style="color: salmon;">location_on</i>
-            <span>Ayeduase</span>
-          </p>
-          <span>P.O.BOX 4341</span>
-        </div>
-        <div class="con">
-          <p>
-            <i class="material-symbols-outlined" style="color: skyblue;">star</i>
-            <span>4.3</span>
-          </p>
-          <button>View</button>
-        </div>
-      </div>
-    </div>
-    <div class="hos_card">
-      <img src="images/hosr.jpg" alt="">
-      <div class="hos_con">
-        <span id="sh">Glory Heights</span>
-        <div class="con">
-          <p>
-            <i class="material-symbols-outlined" style="color: salmon;">location_on</i>
-            <span>Ayeduase</span>
-          </p>
-          <span>P.O.BOX 4341</span>
-        </div>
-        <div class="con">
-          <p>
-            <i class="material-symbols-outlined" style="color: skyblue;">star</i>
-            <span>4.3</span>
-          </p>
-          <button>View</button>
-        </div>
-      </div>
-    </div>
-    <div class="hos_card">
-      <img src="images/hosr.jpg" alt="">
-      <div class="hos_con">
-        <span id="sh">Glory Heights</span>
-        <div class="con">
-          <p>
-            <i class="material-symbols-outlined" style="color: salmon;">location_on</i>
-            <span>Ayeduase</span>
-          </p>
-          <span>P.O.BOX 4341</span>
-        </div>
-        <div class="con">
-          <p>
-            <i class="material-symbols-outlined" style="color: skyblue;">star</i>
-            <span>4.3</span>
-          </p>
-          <button>View</button>
-        </div>
-      </div>
-    </div>
-    <div class="hos_card">
-      <img src="images/hosr.jpg" alt="">
-      <div class="hos_con">
-        <span id="sh">Glory Heights</span>
-        <div class="con">
-          <p>
-            <i class="material-symbols-outlined" style="color: salmon;">location_on</i>
-            <span>Ayeduase</span>
-          </p>
-          <span>P.O.BOX 4341</span>
-        </div>
-        <div class="con">
-          <p>
-            <i class="material-symbols-outlined" style="color: skyblue;">star</i>
-            <span>4.3</span>
-          </p>
-          <button>View</button>
-        </div>
-      </div>
-    </div>
-    <style>
-      .hos_con{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .hos_con #sh{
-        font-family: 'Alegreya Sans SC', sans-serif;
-        font-weight: 600;
-        border-bottom: 1px solid darkgray;
-      }
-      .hos_con p{
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        justify-content: center;
-      }
-      .hos_con .con{
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .hos_con .con button{
-        background: skyblue;
-        padding: 5px;
-        color: white;
-        border-radius: 5px;
-      }
-    </style>
 
-    
+  </style>
+
+    <a href="" class="hos_card">
+      <img src="images/hosr.jpg" alt="">
+      <div class="hos_con">
+        <span id="sh">Glory Heights</span>
+        <div class="con">
+          <p>
+            <i class="material-symbols-outlined" style="color: salmon;">location_on</i>
+            <span>Ayeduase</span>
+          </p>
+          <span>P.O.BOX 4341</span>
+        </div>
+        <div class="con">
+          <p>
+            <i class="material-symbols-outlined" style="color: skyblue;">star</i>
+            <span>4.3</span>
+          </p>
+          <button>View</button>
+        </div>
+      </div>
+    </a>
+    <a href="" class="hos_card">
+      <img src="images/hos4.avif" alt="">
+      <div class="hos_con">
+        <span id="sh">Glory Heights</span>
+        <div class="con">
+          <p>
+            <i class="material-symbols-outlined" style="color: salmon;">location_on</i>
+            <span>Ayeduase</span>
+          </p>
+          <span>P.O.BOX 4341</span>
+        </div>
+        <div class="con">
+          <p>
+            <i class="material-symbols-outlined" style="color: skyblue;">star</i>
+            <span>4.3</span>
+          </p>
+          <button>View</button>
+        </div>
+      </div>
+    </a>
+    <a href="" class="hos_card">
+      <img src="images/hos5.avif" alt="">
+      <div class="hos_con">
+        <span id="sh">Glory Heights</span>
+        <div class="con">
+          <p>
+            <i class="material-symbols-outlined" style="color: salmon;">location_on</i>
+            <span>Ayeduase</span>
+          </p>
+          <span>P.O.BOX 4341</span>
+        </div>
+        <div class="con">
+          <p>
+            <i class="material-symbols-outlined" style="color: skyblue;">star</i>
+            <span>4.3</span>
+          </p>
+          <button>View</button>
+        </div>
+      </div>
+    </a>
+    <a href="" class="hos_card">
+      <img src="images/hos6.avif" alt="">
+      <div class="hos_con">
+        <span id="sh">Glory Heights</span>
+        <div class="con">
+          <p>
+            <i class="material-symbols-outlined" style="color: salmon;">location_on</i>
+            <span>Ayeduase</span>
+          </p>
+          <span>P.O.BOX 4341</span>
+        </div>
+        <div class="con">
+          <p>
+            <i class="material-symbols-outlined" style="color: skyblue;">star</i>
+            <span>4.3</span>
+          </p>
+          <button>View</button>
+        </div>
+      </div>
+    </a>
+    <a href="" class="hos_card">
+      <img src="images/hosr.jpg" alt="">
+      <div class="hos_con">
+        <span id="sh">Glory Heights</span>
+        <div class="con">
+          <p>
+            <i class="material-symbols-outlined" style="color: salmon;">location_on</i>
+            <span>Ayeduase</span>
+          </p>
+          <span>P.O.BOX 4341</span>
+        </div>
+        <div class="con">
+          <p>
+            <i class="material-symbols-outlined" style="color: skyblue;">star</i>
+            <span>4.3</span>
+          </p>
+          <button>View</button>
+        </div>
+      </div>
+    </a>
+    <a href="" class="hos_card">
+      <img src="images/hos3.avif" alt="">
+      <div class="hos_con">
+        <span id="sh">Glory Heights</span>
+        <div class="con">
+          <p>
+            <i class="material-symbols-outlined" style="color: salmon;">location_on</i>
+            <span>Ayeduase</span>
+          </p>
+          <span>P.O.BOX 4341</span>
+        </div>
+        <div class="con">
+          <p>
+            <i class="material-symbols-outlined" style="color: skyblue;">star</i>
+            <span>4.3</span>
+          </p>
+          <button>View</button>
+        </div>
+      </div>
+    </a>
+    <a href="" class="hos_card">
+      <img src="images/home.jpg" alt="">
+      <div class="hos_con">
+        <span id="sh">Glory Heights</span>
+        <div class="con">
+          <p>
+            <i class="material-symbols-outlined" style="color: salmon;">location_on</i>
+            <span>Ayeduase</span>
+          </p>
+          <span>P.O.BOX 4341</span>
+        </div>
+        <div class="con">
+          <p>
+            <i class="material-symbols-outlined" style="color: skyblue;">star</i>
+            <span>4.3</span>
+          </p>
+          <button>View</button>
+        </div>
+      </div>
+    </a>
+    <a href="" class="hos_card">
+      <img src="images/home.jpg" alt="">
+      <div class="hos_con">
+        <span id="sh">Glory Heights</span>
+        <div class="con">
+          <p>
+            <i class="material-symbols-outlined" style="color: salmon;">location_on</i>
+            <span>Ayeduase</span>
+          </p>
+          <span>P.O.BOX 4341</span>
+        </div>
+        <div class="con">
+          <p>
+            <i class="material-symbols-outlined" style="color: skyblue;">star</i>
+            <span>4.3</span>
+          </p>
+          <button>View</button>
+        </div>
+      </div>
+    </a>  
   </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    const lna = document.querySelectorAll('.hos_card')
+     for (let i = 0; i < lna.length+1; i++) {
+      anime({
+        targets: lna[i-1],
+        translateY: [-50,0],
+        // rotate: '1turn',
+        delay: 80 * i,
+        duration: 20 * i+1
+      });
+    }
+  </script>
 </body>
 </html>
 
 <style>
   .page{
-    /* height: 100vh; */
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: wrap;
-    padding: 20px 0;
     overflow: hidden;
     gap: 2%;
     justify-content: flex-start;
-    /* background: whitesmoke; */
   }
   .hos_card{
     width: 23%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    margin: 10px 0;
-    /* margin: 2.5% 0; */
-    min-height: 380px;
-    /* border: 2px solid red; */
-  }
-  .hos_card img{
-    border-radius: 10px;
-    min-height: 330px;
-    width: 100%;
-  }
-  .hos_card .hos_con{
-    bottom: 15px;
-    width: 85%;
-    background: white;
-    text-align: center;
-    border-radius: 10px;
-    padding: 10px;
-    position: absolute;
-    box-shadow: rgba(244, 204, 204, 0.2) 0px 2px 8px 0px;
+    margin: 20px 0 20px 0.4%;
   }
 </style>

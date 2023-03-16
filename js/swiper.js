@@ -84,7 +84,8 @@ const makeShowSwiper =(min)=>{
       },
       speed: 1500,
       autoplay:{
-        delay : 2900
+        delay : 2900,
+        disableOnInteraction: false,
       },
     });
     show_swiper.el.style.zIndex = 1
@@ -101,7 +102,8 @@ const makeShowSwiper =(min)=>{
       speed: 1500,
       autoplay:{
         reverseDirection: true,
-        delay : 2900
+        delay : 2900,
+        disableOnInteraction: true,
       },
     });
     show_swiper2.el.style.zIndex = 1

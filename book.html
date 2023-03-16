@@ -24,12 +24,49 @@
 <body>
   <section class="page">
     <section class="top">
-      <img src="images/logo black.png" alt="">
-      <form class="search_box">
+      <img src="images/logo.jpeg" alt="">
+      <form class="search_form">
+        <div class="input_field">
+          <span>Name</span>
+          <input type="text">
+        </div>
+        <hr>
+        <div class="input_field">
+          <span>University/Campus/College</span>
+          <select name="" id="">
+            <option value="">Ayeduase</option>
+            <option value="">Ejisu</option>
+            <option value="">Asafo</option>
+          </select>
+        </div>
+        <hr>
+        <div class="input_field">
+          <span>Location</span>
+          <select name="" id="">
+            <option value="">Ayeduase</option>
+            <option value="">Ejisu</option>
+            <option value="">Asafo</option>
+          </select>
+        </div>
+        <hr>
+        <div class="input_field">
+          <span>Ratings</span>
+          <select name="" id="">
+            <option value="">3+</option>
+            <option value="">4+</option>
+            <option value="">4.5+</option>
+          </select>
+        </div>
+        <hr>
+        <div class="input_field">
+          <button class="material-symbols-outlined">search</button>
+        </div>
+      </form>
+      <!-- <form class="search_box">
         <button type="submit" class="material-symbols-outlined">search</button>
         <input type="text" name="search">
         <i class="material-symbols-outlined">cancel</i>
-      </form>
+      </form> -->
       <a class="user_box" href="dashboard.html">  
         <img src="images/hostel.webp" alt="">
         <p>
@@ -308,6 +345,44 @@
     border-radius: 50%;
     color: #ebebeb;
   }
+  .search_form{
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+      /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 8vh;
+      width: 50%;
+      padding: 5px;
+      background: white;
+      border: 1px solid #ebebeb;
+    }
+    .search_form .input_field{
+      /* border: 1px solid black; */
+      padding: 5px 15px;
+      display: flex;
+      gap: 7px;
+      flex-direction: column;
+      align-items: center;
+    }
+    .search_form span{
+      color: rgb(102, 102, 102);
+    }
+    .search_form input{
+      padding: 3px;
+      border-bottom: 1px solid darkgray;
+      width: 200px;
+    }
+    .search_form button{
+      background: transparent;
+      color: orange;
+    }
+    .search_form hr{
+      border-left: 1px dotted black;
+      height: 90%;
+    }
   .top .user_box{
     align-items: center;
     display: flex;
