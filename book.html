@@ -4,21 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <script src="https://kit.fontawesome.com/eb75260fb3.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/base.css">
-  <!-- <link rel="stylesheet" href="css/index.css"> -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/book.css">
   <title>StudStay</title>
 </head>
 <body>
@@ -26,7 +18,7 @@
     <section class="nav">
       <img src="images/logo.jpeg" alt="">
       <button class="material-symbols-outlined" id="searchTab">search</button>
-      <form class="search_form">
+      <form class="search_form" data-aos="fade-down" data-aos-duration="750">
         <div class="input_field">
           <span>Name</span>
           <input type="text">
@@ -103,15 +95,16 @@
             </div>
           </section>
           <section class="b_main">
-            <div class="left">
+            <div class="left" data-aos="fade-left" data-aos-duration="750">
               <img src="images/home.jpg" alt="" id="imi">
             </div>
             <div class="right">
-              <div class="r_box"><img src="images/gall10.avif" alt="" id="imi"></div>
-              <div class="r_box"><img src="images/gall3.avif" alt="" id="imi"></div>
-              <div class="r_box rem_box"><img src="images/gall2.avif" alt="" id="imi"></div>
-              <div class="r_box rem_box"><img src="images/gall8.avif" alt="" id="imi"></div>
+              <div class="r_box" data-aos="fade-right" data-aos-duration="750"><img src="images/gall10.avif" alt="" id="imi"></div>
+              <div class="r_box" data-aos="fade-down" data-aos-duration="750"><img src="images/gall3.avif" alt="" id="imi"></div>
+              <div class="r_box rem_box" data-aos="fade-right" data-aos-duration="750"><img src="images/gall2.avif" alt="" id="imi"></div>
+              <div class="r_box rem_box" data-aos="fade-down" data-aos-duration="750"><img src="images/gall8.avif" alt="" id="imi"></div>
             </div>
+
 
             <section class="image_modal" data-con="image_modal">
               <div class="image_modal_swiper swiper">
@@ -135,117 +128,8 @@
                 </div>
               </div>
             </section>
-            <script>
-              
-              
-            </script>
-            <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-            <script>
-              const image_modal = document.querySelector('.image_modal')
-              const image_modal_s = document.querySelector('.image_modal_swiper')
-              image_modal.onclick =(e)=>{
-                if(e.target.dataset.con === 'image_modal'){
-                  image_modal.style.display = 'none'
-                  // image_modal.classList.toggle('change')
-                }
-              }
-
-              const imi = document.querySelectorAll('[id=imi]')
-              const ims = document.getElementById('ims_wrapper')
-              const imt = document.getElementById('imt_wrapper')
-
-              for (let i = 0; i < imi.length; i++) {
-                imi[i].onclick =()=>{
-                  image_modal.style.display = 'flex'
-                  // gen_modal_swiper()
-                }
-              }
-
-              var image_modal_thumb = new Swiper('.image_modal_thumb', {
-                direction: 'horizontal',
-                loop: true,
-                speed: 1500,
-                spaceBetween: 10,
-                slidesPerView: 3,
-                freeMode: true,
-                watchSlidesProgress: true,
-              });
-              var image_modal_swiper = new Swiper('.image_modal_swiper', {
-                direction: 'horizontal',
-                loop: true,
-                effect:'rewind',
-                speed: 1500,
-                navigation: {
-                  nextEl: document.getElementById('image_modal_swiper_next'),
-                  prevEl: document.getElementById('image_modal_swiper_prev'),
-                },
-                thumbs: {
-                  swiper: image_modal_thumb,
-                },
-              })
-            </script>
-
-
-            <style>
-              .image_modal{
-                top: 0;
-                flex-direction: column;
-                left: 0;
-                position: fixed;
-                background: rgba(99, 99, 99, 0.8);
-                width: 100%;
-                height: 100vh;
-                display: none;
-                align-items: center;
-                justify-content: center;
-              }
-              .image_modal.change{
-                display: flex;
-              }
-              .image_modal img{
-                width: 100%;
-                height: 100%;
-              }
-              .image_modal_swiper{
-                position: relative;
-                height: 65%;
-                width: 70%;
-              }
-              .image_modal_thumb{
-                display: flex;
-                justify-content: space-around;
-                height: 22vh;
-                background: black;
-                width: 70%;
-              }
-              .image_modal_thumb .swiper-slide{
-                border: 1px solid black;
-              }
-              .image_modal_thumb .swiper-slide{
-                opacity: 0.4;
-              }
-              .image_modal_thumb .swiper-slide-thumb-active{
-                opacity: 1;
-              }
-              .ims_nav{
-                position: absolute;
-                z-index: 100;
-                background: black;
-                color: white;
-                top: 50%;
-                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                padding: 10px;
-              }
-              #image_modal_swiper_prev{
-                left: 0;
-              }
-              #image_modal_swiper_next{
-                right: 0;
-              }
-            </style>
           </section>
-          
-
+  
           <section class="b_low">
             <div class="left">
               <div>
@@ -261,164 +145,312 @@
                 <p>Wifi connection</p>
               </div>
             </div>
-            <div class="right">
-              <span>Ghc 6,000 | 1yr</span>
-              <button>Book</button>
+            <div class="mid">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus corrupti deleniti reiciendis natus, eligendi qui accusantium, aliquid quo, sit repellendus in aut iure animi similique corporis alias ducimus delectus non!
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio impedit quasi at, eius consequuntur corporis! Praesentium quos, ea eligendi eum temporibus facere. Eum possimus fuga asperiores earum molestiae nobis laborum?
             </div>
+            <a href="" class="right" data-aos="fade-right" data-aos-duration="750">
+              <div>
+                <span>Ghc 6,000</span>
+                <span>1 year</span>
+              </div>
+              <div>
+                <small>
+                  Schedule
+                </small>
+                <small style="color: salmon;">
+                  23rd March, 2023 
+                  <i class="material-symbols-outlined">arrow_range</i>
+                  23rd March, 2023
+                </small>
+              </div>
+              <button>Book</button>
+            </a>
           </section>
-        </section>
-        
-        <style>
-          .main{
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-          }
-          .book_box{
-            width: 80%;
-            display: flex;
-            transition: 0.5s ease;
-            flex-direction: column;
-          }
-          .book_box .b_top{
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-          }
-          .book_box .b_top #p1{
-            display: flex;
-            flex-direction: column;
-            padding: 5px;
-          }
-          .book_box .b_top #p1 #title{
-            font-size: 1.5rem;
-            font-family: 'Alegreya Sans SC', sans-serif;
-          }
-          .book_box .b_top #p2{
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 3px;
-          }
-          .book_box .b_top #p2 p{
-            display: flex;
-            align-items: center;
-          }
-          .book_box .b_main{
-            width: 100%;
-            min-height: 50vh;
-            margin-bottom: 10px;
-            gap: 0.5rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-          }
-          .book_box .b_main .left, .book_box .b_main .right{
-            display: grid;
-          }
-          .book_box .b_main .left{
-            grid-template-columns: 1fr;
-          }
-          .book_box .b_main .right{
-            gap: 0.5rem;
-            grid-template-columns: repeat(2, 1fr);
-          }
-          .book_box .b_main .right .r_box{
-            height: 25vh;
-          }
-          .book_box .b_main img{
-            width: 100%;
-            height: 100%;
-          }
-          .book_box .b_low{
-            width: 100%;
-            display: flex;
-            justify-content: flex-start;
-            gap: 3%;
-          }
-          .book_box .b_low .left div{
-            display: flex;
-            margin: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            align-items: center;
-            gap: 10px;
-          }
-          .book_box .b_low .right{
-            display: flex;
-            flex-direction: column;
-          }
-          .book_box .b_low .right span{
-            font-weight: 600;
-            font-size: 1.1rem;
-            font-family: 'Alegreya Sans SC', sans-serif;
-          }
-          .book_box .b_low .right button{
-            background: #0098be;
-            color: white;
-            border-radius: 5px;
-            height: 30px;
-          }
-          @media all and (max-width:1300px){
-            .book_box{
-              width: 98%;
+
+          <style>
+            .b_low{
+              width: 100%;
+              display: flex;
+              /* border: 5px solid salmon; */
+              justify-content: space-between;
             }
-          }
-          @media all and (max-width:1000px){
-            .book_box{
-              width: 80%;
+            .b_low .mid{
+              max-width: 48%;
+              padding: 1%;
+              display: flex;
+              flex-wrap: wrap;
+              /* background: orange; */
             }
-            .book_box .b_main{
+            .b_low .right{
+              width: max-content;
+              padding: 10px;
+              align-items: center;
+              justify-content: space-around;
+              gap: 10px;
+              text-align: center;
+              color: black;
+              border-radius: 0 0 15px 15px;
+              box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            }
+            .b_low .right div{
               display: flex;
               flex-direction: column;
               align-items: center;
-              gap: 10px;
+              /* border: 1px solid gold; */
             }
-            .book_box .b_main .left,.book_box .b_main .right{
-              width: 100%;
+            .b_low .right span{
+              border-bottom: 1px dotted darkgray;
+              font-size: 2rem;
+              padding: 3px;
             }
-            .book_box .b_main .left img{
-              height: 40vh;
-            }
-            .book_box .b_main .left{
-              min-height: 40vh;
-            }
-            .book_box .b_main .right{
-              min-height: 20vh;
-            }
-            .book_box .b_main .rem_box{
-              display: none;
-            }
-          }
-          @media all and (max-width:630px){
-            .book_box .b_top{
-              align-items: center;
+            .b_low .right small{
+              display: flex;
               flex-direction: column;
-              font-size: 0.8rem;
-              text-align: center;
+              align-items: center;
+              font-size: 1rem;
+              gap: 3px;
+              font-family: 'Alegreya Sans SC', sans-serif;
             }
-            .book_box{
-              width: 95%;
+            .b_low .right button{
+              background: transparent;
+              box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+              color: wheat;
+              font-family: 'Alegreya Sans SC', sans-serif;
+              font-size: 1.2rem;
+              padding: 3px 10px;
+              border-radius: 5px;
+              background: dodgerblue;
+              /* background: ; */
+              /* border-radius: 0 0 10px 10px; */
             }
-            .book_box .b_main{
-              min-height: auto;
+            @media all and (max-width:950px){
+              .b_low{
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+              }
+              .b_low .mid{
+                text-align: center;
+                max-width: 100%;
+              }
             }
-            .book_box .b_main .left{
-              min-height: 20vh;
+            @media all and (max-width:910px){
+              .image_modal_swiper{
+                height: 40%;
+              }
+              .image_modal_swiper,.image_modal_thumb{
+                width: 90%;
+              }
             }
-            .book_box .b_main .left img{
-              height: 30vh;
+            @media all and (max-width:570px){
+              .image_modal_thumb{
+                height: 15vh;
+              }
             }
-            .book_box .b_main .right{
-              min-height: 10vh;
-            }
-            .book_box .b_main .right .r_box{
-              height: 15vh;
-            }
-          }
-        </style>
+          </style>
+        </section> 
       </section>
     </section>
+
+    <section style="width: 100%;" class="show_box" data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000">
+      <p id="header_p">You may also like</p>
+      <div style="width: 100%;" class="sb_right">
+        <div style="width: 100%;" class="show_swiper swiper show1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-slide">
+                <div  class="h_card">
+                  <p id="h_card_pin">
+                    <span>Ayeduase</span>
+                    <i class="material-symbols-outlined">pin_drop</i>
+                  </p>
+                  <p id="h_card_ratings">
+                    <i class="material-symbols-outlined">star</i>
+                    <span>4.1</span>
+                  </p>
+                  <a href="" class="link_box">
+                    <div id="link"><p><i class="material-symbols-outlined">book</i> Book Now  </p></div>
+                    <img src="images/gall10.avif" alt="">
+                  </a>
+                  <div class="h_card_info">
+                    <p>
+                      <span id="s1">Glory Heights,</span>
+                      <span>Kumasi</span>
+                    </p>
+                    <i id="h_card_like" class="fa-regular fa-heart"></i>
+                    <p>
+                      <span id="s1">Ghc 6,000</span>
+                      <span>2 in room</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide">
+                <div  class="h_card">
+                  <p id="h_card_pin">
+                    <span>Ayeduase</span>
+                    <i class="material-symbols-outlined">pin_drop</i>
+                  </p>
+                  <p id="h_card_ratings">
+                    <i class="material-symbols-outlined">star</i>
+                    <span>4.1</span>
+                  </p>
+                  <a href="" class="link_box">
+                    <div id="link"><p><i class="material-symbols-outlined">book</i> Book Now  </p></div>
+                    <img src="images/gall4.avif" alt="">
+                  </a>
+                  <div class="h_card_info">
+                    <p>
+                      <span id="s1">Glory Heights,</span>
+                      <span>Kumasi</span>
+                    </p>
+                    <i id="h_card_like" class="fa-regular fa-heart"></i>
+                    <p>
+                      <span id="s1">Ghc 6,000</span>
+                      <span>2 in room</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide">
+                <div  class="h_card">
+                  <p id="h_card_pin">
+                    <span>Ayeduase</span>
+                    <i class="material-symbols-outlined">pin_drop</i>
+                  </p>
+                  <p id="h_card_ratings">
+                    <i class="material-symbols-outlined">star</i>
+                    <span>4.1</span>
+                  </p>
+                  <a href="" class="link_box">
+                    <div id="link"><p><i class="material-symbols-outlined">book</i> Book Now  </p></div>
+                    <img src="images/gall3.avif" alt="">
+                  </a>
+                  <div class="h_card_info">
+                    <p>
+                      <span id="s1">Glory Heights,</span>
+                      <span>Kumasi</span>
+                    </p>
+                    <i id="h_card_like" class="fa-regular fa-heart"></i>
+                    <p>
+                      <span id="s1">Ghc 6,000</span>
+                      <span>2 in room</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide">
+                <div  class="h_card">
+                  <p id="h_card_pin">
+                    <span>Ayeduase</span>
+                    <i class="material-symbols-outlined">pin_drop</i>
+                  </p>
+                  <p id="h_card_ratings">
+                    <i class="material-symbols-outlined">star</i>
+                    <span>4.1</span>
+                  </p>
+                  <a href="" class="link_box">
+                    <div id="link"><p><i class="material-symbols-outlined">book</i> Book Now  </p></div>
+                    <img src="images/gall9.avif" alt="">
+                  </a>
+                  <div class="h_card_info">
+                    <p>
+                      <span id="s1">Glory Heights,</span>
+                      <span>Kumasi</span>
+                    </p>
+                    <i id="h_card_like" class="fa-regular fa-heart"></i>
+                    <p>
+                      <span id="s1">Ghc 6,000</span>
+                      <span>2 in room</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide">
+                <div  class="h_card">
+                  <p id="h_card_pin">
+                    <span>Ayeduase</span>
+                    <i class="material-symbols-outlined">pin_drop</i>
+                  </p>
+                  <p id="h_card_ratings">
+                    <i class="material-symbols-outlined">star</i>
+                    <span>4.1</span>
+                  </p>
+                  <a href="" class="link_box">
+                    <div id="link"><p><i class="material-symbols-outlined">book</i> Book Now  </p></div>
+                    <img src="images/gall8.avif" alt="">
+                  </a>
+                  <div class="h_card_info">
+                    <p>
+                      <span id="s1">Glory Heights,</span>
+                      <span>Kumasi</span>
+                    </p>
+                    <i id="h_card_like" class="fa-regular fa-heart"></i>
+                    <p>
+                      <span id="s1">Ghc 6,000</span>
+                      <span>2 in room</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide">
+                <div  class="h_card">
+                  <p id="h_card_pin">
+                    <span>Ayeduase</span>
+                    <i class="material-symbols-outlined">pin_drop</i>
+                  </p>
+                  <p id="h_card_ratings">
+                    <i class="material-symbols-outlined">star</i>
+                    <span>4.1</span>
+                  </p>
+                  <a href="" class="link_box">
+                    <div id="link"><p><i class="material-symbols-outlined">book</i> Book Now  </p></div>
+                    <img src="images/gall6.avif" alt="">
+                  </a>
+                  <div class="h_card_info">
+                    <p>
+                      <span id="s1">Glory Heights,</span>
+                      <span>Kumasi</span>
+                    </p>
+                    <i id="h_card_like" class="fa-regular fa-heart"></i>
+                    <p>
+                      <span id="s1">Ghc 6,000</span>
+                      <span>2 in room</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .show_box{
+        flex-direction: column;
+        gap: 25px;
+      }
+      .show_box #header_p{
+        font-size: 1.4rem;
+        width: 90%;
+        font-family: 'Alegreya Sans SC', sans-serif;
+        border-bottom: 2px dotted darkgray;
+      }
+    </style>
+
     <section class="footer" data-aos="fade-right" data-aos-duration="1000">
       <section class="f_left">
         <section class="f_left_con">
@@ -466,40 +498,11 @@
   </section>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="js/swiper.js"></script>
-  <script src="fslightbox.js"></script>
+  <script src="js/index.js"></script>
   <script>
-    const h_card = document.querySelectorAll('.h_card')
-    for (let i = 0; i < h_card.length; i++) {
-      anime({
-        targets: h_card[i],
-        opacity : [0,1],
-        translateY: [-100,0],
-        backgroundColor: '#FFF',
-        duration: parseInt(800) * parseInt(i+1),
-        delay: parseInt(100) * parseInt(i+1)
-      });
-    }
-    
+    AOS.init();
   </script>
 </body>
 </html>
-
-<style>
-  
-  .low{
-    width: 100%;
-    min-height: 85vh;
-    display: flex;
-    align-items: flex-start;
-  }
-  .low .main{
-    width: 100%;
-    min-height: 80vh;
-    display: flex;
-    padding: 1% 0;
-    overflow-y: auto;
-    flex-wrap: wrap;
-  }
-  
-</style>

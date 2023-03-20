@@ -94,6 +94,9 @@ const makeShowSwiper =(min)=>{
       },
     });
     show_swiper.el.style.zIndex = 1
+  }
+
+  if(document.querySelector('.show2')){
     var show_swiper2 = new Swiper('.show2', {
       direction: 'horizontal',
       slidesPerView: slide_num,
@@ -199,4 +202,30 @@ if(searchTab){
   searchTab.onclick =()=>{
     search_form.classList.toggle('change')
   }
+}
+
+if(document.querySelector('.image_modal_thumb')){
+  var image_modal_thumb = new Swiper('.image_modal_thumb', {
+    direction: 'horizontal',
+    loop: true,
+    speed: 1500,
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  var image_modal_swiper = new Swiper('.image_modal_swiper', {
+    direction: 'horizontal',
+    loop: true,
+    effect:'rewind',
+    speed: 1500,
+    navigation: {
+      nextEl: document.getElementById('image_modal_swiper_next'),
+      prevEl: document.getElementById('image_modal_swiper_prev'),
+    },
+    thumbs: {
+      swiper: image_modal_thumb,
+    },
+  })
+  image_modal_swiper.el.style.zIndex = 1000
 }

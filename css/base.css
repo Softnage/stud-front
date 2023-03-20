@@ -321,7 +321,7 @@
   border-radius: 10px;
   min-height: 380px;
   color: black;
-  transition: 0.3s ease;
+  /* transition: 0.3s ease; */
   
 }
 .hos_card:hover{
@@ -357,7 +357,7 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   gap: 6%;
 }
 .footer .f_left{

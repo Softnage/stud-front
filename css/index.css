@@ -811,7 +811,7 @@
     width: 100%;
   }
   .show_box{
-    height: 40vh;
+    min-height: 40vh;
     align-items: center;
     flex-direction: column;
   }
