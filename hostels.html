@@ -10,6 +10,7 @@
 </head>
 <body>
   <section class="page">
+    <nav class="mini_nav">Hostels</nav>
     <nav class="nav">
       <button class="material-symbols-outlined" id="searchTab">search</button>
       <img src="images/logo.jpeg" alt="" width="150px" height="100px">
@@ -54,7 +55,7 @@
         <img src="images/hostel.webp" alt="">
         <p>
           <span>Hi</span>
-          <span>Omar</span>
+          <span>A-mole</span>
         </p>
       </a>
     </nav>
@@ -220,6 +221,50 @@
       </div>
     </a>  
   </section>
+  <section class="footer" data-aos="fade-right" data-aos-duration="1000">
+    <section class="f_left">
+      <section class="f_left_con">
+        <div id="p1">Contact</div>
+        <section>
+          <p>
+            <span id="p1" style="margin-bottom: 5px;">Ashanti Region</span>
+            <span id="s2">TLG Ghana</span>
+            <span id="s2">Mangoase</span>
+          </p>
+        </section>
+        <div>
+          <span id="p1">Follow us</span>
+          <nav>
+            <a id="lna" href=""><i class="fa-brands fa-twitter"></i></a>
+            <a id="lna" href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a id="lna" href=""><i class="fa-brands fa-instagram"></i></a>
+          </nav>
+        </div>
+      </section>
+    </section>
+    <section class="f_left">
+      <section class="f_left_con">
+        <div id="p1">Services</div>
+        <section>
+          <p>
+            <span id="p1" style="margin-bottom: 5px;">By platform</span>
+            <span id="s2">Accomodation</span>
+            <span id="s2">Linen and bedding</span>
+            <span id="s2">Kitchen facilities</span>
+            <span id="s2">Common areas</span>
+            <span id="s2">Wi-fi</span>
+            <span id="s2">Lockers</span>
+          </p>
+          <p>
+            <span id="p1" style="margin-bottom: 5px;">Add-ons</span>
+            <span id="s2">Laundry facilities</span>
+            <span id="s2">Shuttle services</span>
+            <span id="s2">Event and activities</span>
+          </p>
+        </section>
+      </section>
+    </section>
+  </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/swiper.js"></script>
@@ -250,5 +295,43 @@
   .hos_card{
     width: 23%;
     margin: 20px 0 20px 0.4%;
+  }
+
+  @media all and (max-width:1260px){
+    .hos_card{
+      width: 30%;
+      margin: 20px 0 20px 1.5%;
+
+    }
+  }
+  @media all and (max-width:950px){
+    .page{
+      justify-content: space-around;
+    }
+    .hos_card{
+      width: 40%;
+      margin: 10px 0;
+
+    }
+  }
+  @media all and (max-width:730px){
+    .hos_card{
+      width: 45%;
+    }
+  }
+  @media all and (max-width:620px){
+    .hos_card{
+      width: 70%;
+    }
+  }
+  @media all and (max-width:450px){
+    .hos_card{
+      width: 80%;
+    }
+  }
+  @media all and (max-width:320px){
+    .hos_card{
+      width: 92%;
+    }
   }
 </style>

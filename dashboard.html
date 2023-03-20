@@ -37,6 +37,7 @@
         </section>
       </section>
       <section class="main">
+        <nav class="mini_nav">Dashboard</nav>
         <section class="m_top">
           <div class="box">
             <div id="top">
@@ -405,14 +406,14 @@
   }
 
   .main .m_low{
+    /* min-height: 55vh; */
     width: 100%;
-    min-height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .hostel_swiper{
-    min-height: 50vh;
+    min-height: 53vh;
     width: 90%;
 
   }
@@ -454,9 +455,16 @@
   .sideBar.change .s_low{
     min-height: 10vh;
   }
+  .mini_nav{
+    display: none;
+  }
+  
 
 
   @media all and (max-width:1300px){
+    .mini_nav{
+      display: flex;
+    }
     .sideBar{
       top: 0;
       left: -120%;
@@ -504,11 +512,11 @@
       width: 47%;
       margin-bottom: 15px;
     }
+    .main{
+      gap: 1.6rem;
+    }
   }
   @media all and (max-width:530px){
-    .main{
-      margin-top: 20px;
-    }
     .main .m_top #box2{
       display: none;
     }

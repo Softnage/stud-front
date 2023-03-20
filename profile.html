@@ -37,6 +37,7 @@
         </section>
       </section>
       <section class="main">
+        <nav class="mini_nav">Profile</nav>
         <section class="cover_photo">
           <label id="cp_label" for="change_cp">Cover Photo</label>
           <input type="file" id="change_cp" accept="image/*" style="display: none;">
@@ -369,8 +370,13 @@
     min-height: 10vh;
   }
 
-
+  .mini_nav{
+    display: none;
+  }
   @media all and (max-width:1300px){
+    .mini_nav{
+      display: flex;
+    }
     .sideBar{
       top: 0;
       left: -120%;

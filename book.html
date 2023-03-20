@@ -104,15 +104,148 @@
           </section>
           <section class="b_main">
             <div class="left">
-              <img src="images/home.jpg" alt="">
+              <img src="images/home.jpg" alt="" id="imi">
             </div>
             <div class="right">
-              <div class="r_box"><img src="images/gall10.avif" alt=""></div>
-              <div class="r_box"><img src="images/gall3.avif" alt=""></div>
-              <div class="r_box rem_box"><img src="images/gall2.avif" alt=""></div>
-              <div class="r_box rem_box"><img src="images/gall8.avif" alt=""></div>
+              <div class="r_box"><img src="images/gall10.avif" alt="" id="imi"></div>
+              <div class="r_box"><img src="images/gall3.avif" alt="" id="imi"></div>
+              <div class="r_box rem_box"><img src="images/gall2.avif" alt="" id="imi"></div>
+              <div class="r_box rem_box"><img src="images/gall8.avif" alt="" id="imi"></div>
             </div>
+
+            <section class="image_modal" data-con="image_modal">
+              <div class="image_modal_swiper swiper">
+                <div class="swiper-wrapper" id="ims_wrapper">
+                  <div class="swiper-slide"><img src="images/gall10.avif" alt=""></div>
+                  <div class="swiper-slide"><img src="images/gall3.avif" alt=""></div>
+                  <div class="swiper-slide"><img src="images/gall2.avif" alt=""></div>
+                  <div class="swiper-slide"><img src="images/gall8.avif" alt=""></div>
+                  <div class="swiper-slide"><img src="images/gall8.avif" alt=""></div>
+                </div>
+                <button id="image_modal_swiper_prev" class="material-symbols-outlined ims_nav">arrow_back_ios</button>
+                <button id="image_modal_swiper_next" class="material-symbols-outlined ims_nav">arrow_forward_ios</button>
+              </div>
+              <div class="image_modal_thumb swiper">
+                <div class="swiper-wrapper" id="imt_wrapper">
+                  <div class="swiper-slide"><img src="images/gall10.avif" alt=""></div>
+                  <div class="swiper-slide"><img src="images/gall3.avif" alt=""></div>
+                  <div class="swiper-slide"><img src="images/gall2.avif" alt=""></div>
+                  <div class="swiper-slide"><img src="images/gall8.avif" alt=""></div>
+                  <div class="swiper-slide"><img src="images/gall8.avif" alt=""></div>
+                </div>
+              </div>
+            </section>
+            <script>
+              
+              
+            </script>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+            <script>
+              const image_modal = document.querySelector('.image_modal')
+              const image_modal_s = document.querySelector('.image_modal_swiper')
+              image_modal.onclick =(e)=>{
+                if(e.target.dataset.con === 'image_modal'){
+                  image_modal.style.display = 'none'
+                  // image_modal.classList.toggle('change')
+                }
+              }
+
+              const imi = document.querySelectorAll('[id=imi]')
+              const ims = document.getElementById('ims_wrapper')
+              const imt = document.getElementById('imt_wrapper')
+
+              for (let i = 0; i < imi.length; i++) {
+                imi[i].onclick =()=>{
+                  image_modal.style.display = 'flex'
+                  // gen_modal_swiper()
+                }
+              }
+
+              var image_modal_thumb = new Swiper('.image_modal_thumb', {
+                direction: 'horizontal',
+                loop: true,
+                speed: 1500,
+                spaceBetween: 10,
+                slidesPerView: 3,
+                freeMode: true,
+                watchSlidesProgress: true,
+              });
+              var image_modal_swiper = new Swiper('.image_modal_swiper', {
+                direction: 'horizontal',
+                loop: true,
+                effect:'rewind',
+                speed: 1500,
+                navigation: {
+                  nextEl: document.getElementById('image_modal_swiper_next'),
+                  prevEl: document.getElementById('image_modal_swiper_prev'),
+                },
+                thumbs: {
+                  swiper: image_modal_thumb,
+                },
+              })
+            </script>
+
+
+            <style>
+              .image_modal{
+                top: 0;
+                flex-direction: column;
+                left: 0;
+                position: fixed;
+                background: rgba(99, 99, 99, 0.8);
+                width: 100%;
+                height: 100vh;
+                display: none;
+                align-items: center;
+                justify-content: center;
+              }
+              .image_modal.change{
+                display: flex;
+              }
+              .image_modal img{
+                width: 100%;
+                height: 100%;
+              }
+              .image_modal_swiper{
+                position: relative;
+                height: 65%;
+                width: 70%;
+              }
+              .image_modal_thumb{
+                display: flex;
+                justify-content: space-around;
+                height: 22vh;
+                background: black;
+                width: 70%;
+              }
+              .image_modal_thumb .swiper-slide{
+                border: 1px solid black;
+              }
+              .image_modal_thumb .swiper-slide{
+                opacity: 0.4;
+              }
+              .image_modal_thumb .swiper-slide-thumb-active{
+                opacity: 1;
+              }
+              .ims_nav{
+                position: absolute;
+                z-index: 100;
+                background: black;
+                color: white;
+                top: 50%;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                padding: 10px;
+              }
+              #image_modal_swiper_prev{
+                left: 0;
+              }
+              #image_modal_swiper_next{
+                right: 0;
+              }
+            </style>
           </section>
+          
+
           <section class="b_low">
             <div class="left">
               <div>
@@ -286,9 +419,55 @@
         </style>
       </section>
     </section>
+    <section class="footer" data-aos="fade-right" data-aos-duration="1000">
+      <section class="f_left">
+        <section class="f_left_con">
+          <div id="p1">Contact</div>
+          <section>
+            <p>
+              <span id="p1" style="margin-bottom: 5px;">Ashanti Region</span>
+              <span id="s2">TLG Ghana</span>
+              <span id="s2">Mangoase</span>
+            </p>
+          </section>
+          <div>
+            <span id="p1">Follow us</span>
+            <nav>
+              <a id="lna" href=""><i class="fa-brands fa-twitter"></i></a>
+              <a id="lna" href=""><i class="fa-brands fa-facebook-f"></i></a>
+              <a id="lna" href=""><i class="fa-brands fa-instagram"></i></a>
+            </nav>
+          </div>
+        </section>
+      </section>
+      <section class="f_left">
+        <section class="f_left_con">
+          <div id="p1">Services</div>
+          <section>
+            <p>
+              <span id="p1" style="margin-bottom: 5px;">By platform</span>
+              <span id="s2">Accomodation</span>
+              <span id="s2">Linen and bedding</span>
+              <span id="s2">Kitchen facilities</span>
+              <span id="s2">Common areas</span>
+              <span id="s2">Wi-fi</span>
+              <span id="s2">Lockers</span>
+            </p>
+            <p>
+              <span id="p1" style="margin-bottom: 5px;">Add-ons</span>
+              <span id="s2">Laundry facilities</span>
+              <span id="s2">Shuttle services</span>
+              <span id="s2">Event and activities</span>
+            </p>
+          </section>
+        </section>
+      </section>
+    </section>
   </section>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/swiper.js"></script>
+  <script src="fslightbox.js"></script>
   <script>
     const h_card = document.querySelectorAll('.h_card')
     for (let i = 0; i < h_card.length; i++) {
