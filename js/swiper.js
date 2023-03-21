@@ -41,18 +41,27 @@ const makeBannerSwiper =(min)=>{
     var banner_swiper = new Swiper(".banner_swiper", {
       slidesPerView: slide_num,
       loop:true,
-      // autoplay:{
-      //   delay : 3000
-      // },
       speed: 1000,
       spaceBetween: 10,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
     })
     banner_swiper.el.style.zIndex = 10
   }
+}
+
+if(document.querySelector('.town_swiper')){
+  var town_swiper = new Swiper('.town_swiper', {
+    direction: 'horizontal',
+    loop: true,
+    speed:800,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable:true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
 }
 
 const menu_tag = document.getElementById('menu_tag')
@@ -154,11 +163,6 @@ const handleScreen =(min)=>{
   if(sideBar){
     sideBar_tag.onclick =()=>{
       sideBar.classList.toggle('show')
-      if(min > 1300){
-        sideBar.classList.toggle('change')
-        sideBar_tag.classList.toggle('change')
-        main.classList.toggle('change')
-      }
     }
   }
 }

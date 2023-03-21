@@ -145,10 +145,9 @@
   }
 }
 @media all and (max-width:530px){
-  /* .search_form{
-    left: 0;
-    top: 0;
-  } */
+  .home_search_form{
+    background: transparent !important;
+  }
   .nav img{
     width:50px; 
     height:50px;
@@ -321,7 +320,7 @@
   border-radius: 10px;
   min-height: 380px;
   color: black;
-  /* transition: 0.3s ease; */
+  transition: 0.3s ease;
   
 }
 .hos_card:hover{
@@ -414,3 +413,6 @@
     justify-content: space-between;
   }
 }
+
+
+

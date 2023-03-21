@@ -39,7 +39,7 @@
       <section class="main">
         <nav class="mini_nav">Dashboard</nav>
         <section class="m_top">
-          <div class="box">
+          <div class="box box1" id="box1">
             <div id="top">
               <img src="images/gall4.avif" alt="" height="100px" width="150px" style="border-radius: 10px;">
               <p>
@@ -57,10 +57,11 @@
           </div>
 
           <style>
-            .m_top .box{
+            .m_top .box1{
               display: flex;
               flex-direction: column;
               justify-content: space-between;
+              background: #441e44 !important;
             }
             .m_top .box p{
               display: flex;
@@ -74,7 +75,7 @@
             }
           </style>
 
-          <div class="box" id="box2">
+          <div class="box box2" id="box2">
             <div>
               <i class="material-symbols-outlined">savings</i>
               <span>Total Spent</span>
@@ -83,15 +84,45 @@
               GHc 7,500
             </div>
           </div>
-
+          <div class="box box1">
+            <div id="top">
+              <img src="images/gall4.avif" alt="" height="100px" width="150px" style="border-radius: 10px;">
+              <p>
+                <span id="s1">Ghc 12,000</span>
+                <span>1 in room</span>
+              </p>
+            </div>
+            <p>
+              <span style="font-size: 1.5rem;">Glory Heights</span>
+            </p>
+            <p>
+              <span style="font-family: 'Alegreya Sans SC', sans-serif;">Pick Of the week</span>
+              <a href="">View</a>
+            </p>
+          </div>
           <style>
-            .m_top #box2{
+            .m_top .box3 div{
+              display: flex;
+              height: 100%;
+              width: 100%;
+              flex-direction: column;
+              justify-content: space-around;
               align-items: center;
-              justify-content: center;
+              gap: 10px;
+            }
+            .m_top .box3 div img{
+              width: 50%;
+              height: 60%;
+              border-radius: 10px;
+            }
+            .m_top .box3 div p{
+              align-items: center;
+              display: flex;
+              flex-direction: column;
             }
           </style>
-          <div class="box" id="box2"></div>
-          <div class="box">
+
+          <div class="box box4">
             <div id="top">
               <div class="top_pick_swiper swiper">
                 <div class="swiper-wrapper">
@@ -128,7 +159,7 @@
             </p>
             <p>
               <span style="font-family: 'Alegreya Sans SC', sans-serif;">Top Picks</span>
-              <a href="home.html" style="background: rgb(68, 30, 68);">Browse</a>
+              <a href="home.html" style="background: skyblue">Browse</a>
             </p>
           </div>
         </section>
@@ -287,18 +318,16 @@
 
 
 <style>
-  .page{
+  /* .page{
     flex-direction: row;
-  }
+  } */
   .sideBar{
     display: flex;
-    flex-direction: column;
-    width: 20%;
-    min-height: 100vh;
+    width: 100%;
     position: relative;
-    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
-    border-right: 1px solid #ebebeb;
+    align-items: center;
     transition: 0.3s ease;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
   .sideBar #sideBar_tag{
     position: absolute;
@@ -326,7 +355,6 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    min-height: 15vh;
   }
   .sideBar .s_header p{
     display: flex;
@@ -337,39 +365,36 @@
   }
 
   .sideBar .s_main{
-    min-height: 70vh;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-direction: row;
   }
   .sideBar .s_main nav{
-    min-height: 40vh;
-    width: 85%;
     display: flex;
+    /* width: 100%; */
     justify-content: space-around;
-    flex-direction: column;
     align-items: center;
+    gap: 30px;
   }
   .sideBar .s_main nav a{
-    width: 80%;
+    /* width: 80%; */
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
-    font-weight: 500;
+    gap: 5px;
+    color: black;
   }
 
   .sideBar .s_low{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 15vh;
   }
   .sideBar .s_low a{
     display: flex;
     align-items: center;
   }
   .main{
-    width: 80%;
+    width: 95%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -388,8 +413,35 @@
     border-radius: 10px;
     min-height: 25vh;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    background: white;
+    color: white;
   }
+  .m_top .box2, .m_top .box3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #562856 !important;
+  }
+  .m_top .box2 i, .m_top .box3 i{
+    top: 5%;
+    left: 3%;
+    padding: 5px;
+    position: absolute;
+    border-radius: 5px;
+    color: wheat;
+    background: salmon;
+    transition: 0.5s ease;
+  }
+  .m_top .box2:hover i, .m_top .box3:hover i{
+    transform: rotateY(180deg);
+    background: skyblue;
+  }
+
+  .m_top .box1, .m_top .box4{
+    background: #441e44 !important;
+  }
+
   .main .m_top .box #top{
     display: flex;
     justify-content: space-between;
@@ -406,7 +458,6 @@
   }
 
   .main .m_low{
-    /* min-height: 55vh; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -415,45 +466,11 @@
   .hostel_swiper{
     min-height: 53vh;
     width: 90%;
-
   }
-
-  .main.change{
-    width: 95%;
-  }
-
-  .sideBar.change{
-    width: 5%;
-  }
-  .sideBar.change .s_header{
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    min-height: 20vh;
-  }
-  .sideBar.change .s_header p span{
-    font-size: 0.8vw;
-  }
-  .sideBar.change .s_main{
-    min-height: 65vh;
-    align-items: center;
+  .hostel_swiper .swiper-slide{
+    display: flex;
     justify-content: center;
-  }
-  .sideBar.change .s_main nav{
-    width: 100%;
     align-items: center;
-  }
-  .sideBar.change .s_main nav a{
-    justify-content: center;
-  }
-  .sideBar.change .s_main nav a span{
-    display: none;
-  }
-  .sideBar.change .s_low a span{
-    display: none;
-  }
-  .sideBar.change .s_low{
-    min-height: 10vh;
   }
   .mini_nav{
     display: none;
@@ -466,13 +483,13 @@
       display: flex;
     }
     .sideBar{
-      top: 0;
-      left: -120%;
+      /* top: 0; */
+      top: -15vh;
       width: 100%;
       background: white;
       position: fixed;
       z-index:20;
-      transition: 0.8s ease;
+      transition: 0.5s ease;
       padding: 0 15px;
     }
     .sideBar .s_main{
@@ -485,7 +502,7 @@
       width: 100%;
     }
     .sideBar.show{
-      left: 0;
+      top: 0;
     }
     .sideBar #sideBar_tag{
       position: fixed;
@@ -495,7 +512,7 @@
     }
   }
 
-  @media all and (max-width:1000px){
+  @media all and (max-width:1100px){
     .hostel_swiper{
       width: 97%;
     }
@@ -503,8 +520,6 @@
       display: flex;
       justify-content: center;
     }
-  }
-  @media all and (max-width:930px){
     .m_top{
       flex-wrap: wrap;
     }
@@ -516,8 +531,32 @@
       gap: 1.6rem;
     }
   }
+  @media all and (max-width:950px){
+    .sideBar{
+      width: auto;
+      flex-direction: column;
+      justify-content: space-around;
+      gap: 20px;
+      top: 0;
+      left: -300px;
+      padding: 15px;
+      min-height: 100vh;
+    }
+    .sideBar .s_main{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .sideBar .s_main nav{
+      align-items: center;
+      flex-direction: column;
+    }
+    .sideBar.show{
+      left: 0;
+    }
+  }
   @media all and (max-width:530px){
-    .main .m_top #box2{
+    .main .m_top #box1, .main .m_top .box2{
       display: none;
     }
     .main .m_top .box{
