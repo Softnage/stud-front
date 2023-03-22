@@ -53,6 +53,9 @@ if(document.querySelector('.town_swiper')){
     direction: 'horizontal',
     loop: true,
     speed:800,
+    autoplay:{
+      delay:3000
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable:true,

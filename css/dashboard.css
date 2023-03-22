@@ -1,0 +1,141 @@
+.sideBar{
+  display: flex;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  transition: 0.3s ease;
+  max-height: 9vh;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sideBar #sideBar_tag{
+  position: absolute;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  cursor: pointer;
+  right: 0;
+  color: darkgray;
+  transition: 0.4s ease;
+}
+
+.sideBar #sideBar_tag.change{
+  position: relative;
+  min-height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sideBar .s_header,.sideBar .s_main, .sideBar .s_low{
+  width: 100%;
+}
+.sideBar .s_header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.sideBar .s_header p{
+  display: flex;
+  flex-direction: column;
+}
+.sideBar .s_header p #s2{
+  color: darkgray;
+}
+
+.sideBar .s_main{
+  display: flex;
+  flex-direction: row;
+}
+.sideBar .s_main nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+.sideBar .s_main nav a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  color: black;
+}
+
+.sideBar .s_low{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sideBar .s_low a{
+  display: flex;
+  align-items: center;
+}
+.main{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.3s ease;
+}
+.mini_nav{
+  display: none;
+}
+
+@media all and (max-width:1300px){
+  .mini_nav{
+    display: flex;
+  }
+  .sideBar{
+    /* top: 0; */
+    top: -15vh;
+    width: 100%;
+    background: white;
+    position: fixed;
+    z-index:20;
+    transition: 0.5s ease;
+    padding: 0 15px;
+  }
+  .sideBar .s_main{
+    align-items: center;
+  }
+  .sideBar .s_main nav{
+    width: auto;
+  }
+  .sideBar .s_main nav a{
+    width: 100%;
+  }
+  .sideBar.show{
+    top: 0;
+  }
+  .sideBar #sideBar_tag{
+    position: fixed;
+  }
+  .main{
+    width: 100%;
+  }
+}
+
+@media all and (max-width:950px){
+  .sideBar{
+    width: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    top: 0;
+    left: -300px;
+    padding: 15px;
+    min-height: 100vh;
+  }
+  .sideBar .s_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sideBar .s_main nav{
+    align-items: center;
+    flex-direction: column;
+  }
+  .sideBar.show{
+    left: 0;
+  }
+}

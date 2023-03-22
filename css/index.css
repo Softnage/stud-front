@@ -337,7 +337,7 @@
   height: 200px;
 }
 .town_box .list_box{
-  width: 75%;
+  width: 70%;
 }
 .list_box .header{
   border-bottom: 1px dotted darkgray;
@@ -454,7 +454,8 @@
   min-height: 50vh;
 }
 .explore .ex_left .con #ph{
-  font-family: 'Alegreya Sans SC', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-family: 'Alegreya Sans SC', sans-serif; */
   font-size: 2.3rem;
   font-weight: 600;
 }

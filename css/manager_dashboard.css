@@ -1,0 +1,338 @@
+.page{
+  flex-direction: row !important;
+}
+.sideBar{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  min-height: 100vh;
+  position: relative;
+  border-right: 1px solid #ebebeb;
+  transition: 0.3s ease;
+}
+.sideBar #sideBar_tag{
+  position: absolute;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  cursor: pointer;
+  right: 0;
+  color: darkgray;
+  transition: 0.4s ease;
+}
+
+.sideBar #sideBar_tag.change{
+  position: relative;
+  min-height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sideBar .s_header,.sideBar .s_main, .sideBar .s_low{
+  width: 100%;
+}
+.sideBar .s_header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 15vh;
+}
+.sideBar .s_header p{
+  display: flex;
+  flex-direction: column;
+}
+.sideBar .s_header p #s2{
+  color: darkgray;
+}
+
+.sideBar .s_main{
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.sideBar .s_main nav{
+  min-height: 40vh;
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+.sideBar .s_main nav a{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.sideBar .s_low{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 15vh;
+}
+.sideBar .s_low a{
+  display: flex;
+  align-items: center;
+}
+.main{
+  width: 80%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease;
+}
+
+.main.change{
+  width: 95%;
+}
+
+.sideBar.change{
+  width: 5%;
+}
+.sideBar.change .s_header{
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  min-height: 20vh;
+}
+.sideBar.change .s_header p span{
+  font-size: 0.8vw;
+}
+.sideBar.change .s_main{
+  min-height: 65vh;
+  align-items: center;
+  justify-content: center;
+}
+.sideBar.change .s_main nav{
+  width: 100%;
+  align-items: center;
+}
+.sideBar.change .s_main nav a{
+  justify-content: center;
+}
+.sideBar.change .s_main nav a span{
+  display: none;
+}
+.sideBar.change .s_low a span{
+  display: none;
+}
+.sideBar.change .s_low{
+  min-height: 10vh;
+}
+.mini_nav{
+  display: none;
+}
+
+.main .m_top{
+  width: 100%;
+  min-height: 25vh;
+  background: rgb(62, 62, 62);
+  background: black;
+  background: #441e44;
+  background: #043c4b;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 80px;
+  justify-content: space-around;
+}
+.main .m_top .box{
+  width: 21%;
+  padding: 1%;
+  min-height: 22vh;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: white;
+  transform: translateY(50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.m_top .box i{
+  color: black;
+  padding: 5px;
+}
+.m_top .box p{
+  display: flex;
+  justify-content: space-between;
+}
+.m_top .box p small{
+  background: #d2f2d9;
+  border-radius: 18px;
+  font-size: 0.7rem;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.m_top .box strong{
+  font-size: 2rem;
+}
+
+.main .m_low{
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.m_low{
+  display: flex;
+  align-items: center;
+}
+.m_low .ml_left{
+  width: 60%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.m_low .ml_right{
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.m_low .ml_right p{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 20vh;
+  color: rgb(113, 169, 192);
+}
+.m_low .ml_right p span{
+  font-size: 2rem;
+}
+.m_low .ml_right p, .m_low .ml_right a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.m_low .ml_right a{
+  width: 100%;
+  background: #043c4b;
+  color: white;
+  position: relative;
+  min-height: 10vh;
+}
+.m_low .ml_right a div{
+  position: absolute;
+  width: 0;
+  left: 0;
+  min-height: 10vh;
+  background: rgba(0, 0, 0, 0.6);
+  transition: 0.3s ease;
+}
+.m_low .ml_right a:hover div{
+  width: 100%;
+}
+.chart_box{
+  width: 100%;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media all and (max-width:1300px){
+  .mini_nav{
+    display: flex;
+  }
+  .sideBar{
+    top: 0;
+    left: -110%;
+    min-width: 50%;
+    background: white;
+    position: fixed;
+    z-index:20;
+    transition: 0.8s ease;
+    padding: 0 15px;
+  }
+  .sideBar .s_main{
+    align-items: center;
+  }
+  .sideBar .s_main nav{
+    width: auto;
+  }
+  .sideBar .s_main nav a{
+    width: 100%;
+  }
+  .sideBar.show{
+    left: 0;
+  }
+  .sideBar #sideBar_tag{
+    position: fixed;
+  }
+  .main{
+    width: 100%;
+  }
+}
+@media all and (max-width:1100px){
+  .main .m_top .box{
+    transform: revert;
+  }
+  .main .m_low{
+    flex-direction: column-reverse;
+  }
+}
+@media all and (max-width:1000px){
+  .hostel_swiper{
+    width: 97%;
+  }
+  .m_low .swiper .swiper-slide{
+    display: flex;
+    justify-content: center;
+  }
+}
+@media all and (max-width:930px){
+  .main{
+    margin: 0 !important;
+    padding: 0;
+    gap: 0;
+  }
+  .m_top{
+    flex-wrap: wrap;
+  }
+  .main .m_top{
+    border-radius:  0 0 10px 10px;
+    background: #151a24;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    justify-content: center;
+    gap: 1px;
+  }
+  .main .m_top .box{
+    border-radius: 10px;
+    width: 45%;
+    margin: 3px;
+  }
+  .main .m_low .ml_left, .main .m_low .ml_right{
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+  }
+  .main .m_low .ml_left{
+    min-height: auto;
+    height: auto;
+  }
+}
+@media all and (max-width:500px){
+  .main{
+    margin-top: 20px;
+  }
+  .main .m_top #box2{
+    display: none;
+  }
+  .main .m_top .box{
+    text-align: center;
+    width: 90%;
+    padding: 1%;
+    min-height: 10vh;
+    margin-bottom: 3px;
+  }
+}
