@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/eb75260fb3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/manager_dashboard.css">
+  <title>Document</title>
+</head>
+<body>
+  <section class="page">
+      <section class="sideBar">
+        <i id="sideBar_tag" class="material-symbols-outlined">widgets</i>
+        <section class="s_header">
+          <a href="index.html">
+            <img src="images/logo.jpeg" alt="" width="80px" height="80px">
+          </a>
+          <p>
+            <span id="s1" style="font-family: 'Poppins',sans-serif;">Hi  A-Mole</span>
+            <span id="s2">Dashboard</span>
+          </p>
+        </section>
+        <section class="s_main">
+          <nav>
+            <a href=""><i class="material-symbols-outlined">space_dashboard</i><span>Dashboard</span></a>
+            <a href=""><i class="material-symbols-outlined">beenhere</i><span>Bookings</span></a>
+            <a href=""><i class="material-symbols-outlined">star</i><span>Favorites</span></a>
+            <a href=""><i class="material-symbols-outlined">notifications</i><span>Notifications</span></a>
+            <a href=""><i class="material-symbols-outlined">settings</i><span>Settings</span></a>
+          </nav>
+        </section>
+        <section class="s_low">
+          <a href=""><i class="material-symbols-outlined">logout</i><span>Logout</span></a>
+        </section>
+      </section>
+      <section class="main">
+        <nav class="mini_nav">Add Room</nav>
+        <form class="add_room_form" id="add_room_form" method="post">  
+          <section class="add_room_form_box">
+            <section class="info_box_holder">
+              <p id="ph">Add A Room</p>
+              <section class="info_box">
+                <div class="input_field">
+                  <small>Room Name</small>
+                  <input type="text" placeholder="Room Name" required>
+                </div>
+                <select name="" id="" required>
+                  <option selected hidden value="">Hostel</option>
+                  <option value="">Glory Heights</option>
+                  <option value="">New Towers</option>
+                </select>
+                <select name="" id="" required>
+                  <option selected hidden value="">Capacity</option>
+                  <option value="">1 in a room</option>
+                  <option value="">2 in a room</option>
+                  <option value="">3 in a room</option>
+                  <option value="">4 in a room</option>
+                  <option value="">Apartment</option>
+                </select>
+                <div class="input_field">
+                  <small>Price | GHc</small>
+                  <input type="text" placeholder="Price" required>
+                </div>
+              </section>
+              <section class="tags_box">
+                  <label class="check_label">
+                    <input type="checkbox" checked>
+                    <div class="lab_box">
+                      <span>Wifi</span><i class="material-symbols-outlined">wifi</i>
+                    </div>
+                  </label>
+                  <label class="check_label">
+                    <input type="checkbox">
+                    <div class="lab_box">
+                      <span>Self Metred</span><i class="material-symbols-outlined">power</i>
+                    </div>
+                  </label>
+                  <label class="check_label">
+                    <input type="checkbox">
+                    <div class="lab_box">
+                      <span>Study Room</span><i class="material-symbols-outlined">school</i>
+                    </div>
+                  </label>
+                  <label class="check_label">
+                    <input type="checkbox">
+                    <div class="lab_box">
+                      <span>Common Area</span><i class="material-symbols-outlined">chair</i>
+                    </div>
+                  </label>
+                  <label class="check_label">
+                    <input type="checkbox">
+                    <div class="lab_box">
+                      <span>Seperate Kitchen</span><i class="material-symbols-outlined">kitchen</i>
+                    </div>
+                  </label>
+              </section>
+              <button>Add</button>
+            </section>
+            <style>
+              .check_label input[type='checkbox']{
+                display: none;
+              }
+              .lab_box{
+                border: 1px dotted #043c4b;
+                padding: 10px;
+                border-radius: 5px;
+                font-size: 0.9rem;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                align-items: center;
+                transition: 0.3s ease;
+              }
+              .lab_box i{
+                font-size: 0.9rem;
+                /* color: burlywood; */
+              }
+              .check_label > input[type='checkbox']:checked + .lab_box{
+                background: #043c4b;
+                color: white;
+              }
+
+            </style>
+            <section class="image_box">
+              <div class="room_image_box">
+                <input type="file" id="room_pic_1" class="room_pic" accept="image/*" name="image1" required>
+                <img src="images/place2.avif" alt="required" class="room_pic_box">
+                <label class="material-symbols-outlined" for="room_pic_1">add_a_photo</label>
+              </div>
+              <div class="room_image_box">
+                <input type="file" id="room_pic_2" class="room_pic" accept="image/*" name="image2" required>
+                <img src="images/place2.avif" alt="" class="room_pic_box">
+                <label class="material-symbols-outlined" for="room_pic_2">add_a_photo</label>
+              </div>
+              <div class="room_image_box">
+                <input type="file" id="room_pic_3" class="room_pic" accept="image/*" name="image3" required>
+                <img src="images/place2.avif" alt="" class="room_pic_box">
+                <label class="material-symbols-outlined" for="room_pic_3">add_a_photo</label>
+              </div>
+              <div class="room_image_box">
+                <input type="file" id="room_pic_4" class="room_pic" accept="image/*" name="image4">
+                <img src="images/place2.avif" alt="" class="room_pic_box">
+                <label class="material-symbols-outlined" for="room_pic_4">add_a_photo</label>
+              </div>
+              <div class="room_image_box">
+                <input type="file" id="room_pic_5" class="room_pic" accept="image/*" name="image5">
+                <img src="images/place2.avif" alt="" class="room_pic_box">
+                <label class="material-symbols-outlined" for="room_pic_5">add_a_photo</label>
+              </div>
+              <div class="room_image_box">
+                <input type="file" id="room_pic_6" class="room_pic" accept="image/*" name="image6">
+                <img src="images/place2.avif" alt="" class="room_pic_box">
+                <label class="material-symbols-outlined" for="room_pic_6">add_a_photo</label>
+              </div>
+
+              <script>
+                const inp = document.querySelectorAll('.room_pic')
+                const pic_box = document.querySelectorAll('.room_pic_box')
+                for (let i = 0; i < inp.length; i++) {
+                  inp[i].onchange =()=> {
+                    const [file] = inp[i].files
+                    pic_box[i].src = URL.createObjectURL(file)
+                  }
+                }
+
+              </script>
+            
+              <style>
+                .room_image_box{
+                  position: relative;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+                .room_image_box img{
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 10px;
+                }
+                .room_image_box input{
+                  width: 1px;
+                  height: 1px;
+                  position: absolute;
+                  bottom: 0;
+                }
+                .room_image_box label{
+                  background: black;
+                  /* top: 0; */
+                  padding: 5px;
+                  border-radius: 3px;
+                  color: wheat;
+                  position: absolute;
+                }
+              </style>
+            </section>
+          </section>
+        </form>
+      </section>
+
+      <style>
+        .add_room_form{
+          width: 100%;
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .add_room_form .add_room_form_box{
+          width: 100%;
+          min-height: 60vh;
+          gap: 1rem;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+        }
+        .add_room_form .info_box_holder{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+          width: 35%;
+        }
+        .add_room_form .info_box_holder button{
+          background: #043c4b;
+          color: white;
+          width: 80%;
+          padding: 10px;
+        }
+        .add_room_form .tags_box, .add_room_form #ph{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 0.7rem;
+          border-radius: 10px;
+          padding: 1rem 0;
+          /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+        }
+        .add_room_form .tags_box p{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .add_room_form .info_box{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border-radius: 10px;
+          width: 100%;
+          min-height: 50vh;
+          justify-content: space-around;
+          /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+        }
+        .add_room_form .info_box input, .add_room_form .info_box select{
+          width: 80%;
+          padding: 10px;
+          color: black;
+          height: 25px;
+          border: 1px solid transparent;
+          border-bottom: 1px solid darkgray;
+        }
+        .add_room_form .info_box select{
+          width: 85%;
+          height: 50px;
+        }
+        .add_room_form .info_box .input_field{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          position: relative;
+        }
+        .add_room_form .info_box .input_field small{
+          display: none;
+          position: absolute;
+          background: white;
+          padding: 0 5px;
+          border: 1px solid burlywood;                  
+        }
+        .add_room_form .info_box .input_field.change small{
+          top: -10px;
+          left: 50px;
+          display: flex;
+          animation: fadeLeft 0.2s linear;
+        }
+        @keyframes fadeLeft{
+          0%{left: 20px; opacity: 0;}
+          100%{left: 50px; opacity: 1;}
+        }
+        .add_room_form .info_box input.change{
+          border: 1px solid rgb(219, 198, 157);
+          border-radius: 3px;
+        }
+        .add_room_form .image_box{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          width: 50%;
+          min-height: 60vh;
+          gap: 0.5rem;
+          align-items: center;
+          /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+          padding: 0.5rem;
+          border-radius: 10px;
+        }
+        .image_box .room_image_box{
+          border-radius: 10px;
+          width: 100%;
+          height: 30vh;
+        }
+        @media all and (max-width:1200px){
+          .add_room_form .image_box{
+            width: 60%;
+          }
+        }
+        @media all and (max-width:950px){
+          .add_room_form .add_room_form_box{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+          }
+          .add_room_form .add_room_form_box button{
+            width: 60%;
+          }
+          .add_room_form .info_box_holder{
+            padding: 10px 0;
+            width: 100%;
+          }
+          .add_room_form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background: gold; */
+          }
+          .add_room_form .image_box{
+            padding: 0;
+            padding: 15px 0;
+            gap: 15px;
+            width: 96%;
+          }
+          .add_room_form .image_box .room_image_box{
+            width: 99%;
+            height: 25vh;
+          }
+        }
+        @media all and (max-width:490px){
+          .add_room_form .image_box{
+            display: flex;
+            flex-direction: column;
+          }
+          .add_room_form .image_box .room_image_box{
+            width: 95%;
+          }
+        }
+      </style>
+  </section>
+
+  <script>
+    const add_room_form = document.getElementById('add_room_form')
+    const input_field = document.querySelectorAll('.input_field')
+
+    let add_room_form_el = [...add_room_form.elements]
+    let in_list = []
+    add_room_form_el.forEach(el=>{
+      if(el.type === 'text'){
+        in_list.push(el)
+      }
+    })
+
+    for (let i = 0; i < in_list.length; i++) {
+      in_list[i].onfocus =()=>{
+        in_list[i].classList.add('change')
+        input_field[i].classList.add('change')
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="js/manager.js"></script>
+</body>
+</html>
