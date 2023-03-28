@@ -1,12 +1,15 @@
 .page{
   flex-direction: row !important;
+  justify-content: flex-end;
 }
 .sideBar{
   display: flex;
   flex-direction: column;
   width: 20%;
   min-height: 100vh;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   border-right: 1px solid #ebebeb;
   transition: 0.3s ease;
 }
