@@ -47,14 +47,46 @@
           <a href="">Cancelled <i class="material-symbols-outlined">close</i></a>
         </nav>
         <section class="book_box">
+          <style>
+            .m_hos_card:hover .m_hos_card_cover{
+              height: 100%;
+            }
+            .m_hos_card:hover .m_hos_card_cover i{
+              pointer-events: all;
+              opacity: 1;
+            }
+            .m_hos_card_cover{
+              width: 100%;
+              height: 0;
+              position: absolute;
+              background: rgba(0, 0, 0, 0.6);
+              border-radius: 10px;
+              z-index: 10;
+              display: flex;
+              justify-content: center;
+              gap: 1rem;
+              transition: 0.5s ease;
+              align-items: center;
+            }
+            .m_hos_card_cover i{
+              background: black;
+              padding: 10px;
+              opacity: 0;
+              pointer-events: none;
+              border-radius: 5px;
+              transition: 0.7s ease;
+              color: wheat;
+              cursor: pointer;
+            }
+          </style>
           <div class="m_hos_card">
+            <div class="m_hos_card_cover">
+              <i class="material-symbols-outlined">delete</i>
+              <i class="material-symbols-outlined">edit</i>
+            </div>
             <article>
               <div>
                 <strong id="s1">Room 3A <i class="material-symbols-outlined">bolt</i></strong>
-                <p>
-                  <i class="material-symbols-outlined">delete</i>
-                  <i class="material-symbols-outlined">edit</i>
-                </p>
               </div>
             </article>
             <div class="m_hos_card_swiper swiper">
@@ -86,7 +118,7 @@
             </article>
             <div class="m_hos_card_swiper swiper">
               <div class="swiper-wrapper">
-                <img src="images/home.jpg" class="swiper-slide">
+                <img src="images/hos6.avif" class="swiper-slide">
                 <img src="images/gall3.avif" class="swiper-slide">
                 <img src="images/armchair.jpg" class="swiper-slide">
               </div>
@@ -113,7 +145,7 @@
             </article>
             <div class="m_hos_card_swiper swiper">
               <div class="swiper-wrapper">
-                <img src="images/home.jpg" class="swiper-slide">
+                <img src="images/hos4.avif" class="swiper-slide">
                 <img src="images/gall3.avif" class="swiper-slide">
                 <img src="images/armchair.jpg" class="swiper-slide">
               </div>
@@ -140,7 +172,7 @@
             </article>
             <div class="m_hos_card_swiper swiper">
               <div class="swiper-wrapper">
-                <img src="images/home.jpg" class="swiper-slide">
+                <img src="images/hos3.avif" class="swiper-slide">
                 <img src="images/gall3.avif" class="swiper-slide">
                 <img src="images/armchair.jpg" class="swiper-slide">
               </div>
@@ -259,7 +291,8 @@
     position: relative;
     /* min-height: 40vh; */
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 10px;
     margin: 10px 0;
     /* background: salmon; */
@@ -282,7 +315,8 @@
     /* border: 1px solid black; */
   }
   .m_hos_card article div i{
-    color: salmon;
+    /* color: salmon; */
+    display: none;
     cursor: pointer;
   }
   .m_hos_card article strong{
@@ -298,6 +332,7 @@
   } */
   .m_hos_card article strong i{
     color: skyblue;
+    display: none;
   }
   .m_hos_card button{
     position: absolute;
@@ -313,6 +348,7 @@
     color: black;
     font-size: 2rem;
     background: transparent;
+    display: none;
     /* background: white; */
   }
   .m_hos_card .next_hostel{
