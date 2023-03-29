@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/hostelinfo.css">
+  <!-- <link rel="stylesheet" href="css/index.css"> -->
+  <title>Document</title>
+</head>
+<body>
+  <section class="page">
+    <section class="nav">
+      <img src="images/logo.jpeg" alt="">
+      <button class="material-symbols-outlined" id="searchTab">search</button>
+      <form class="search_form" data-aos="fade-down" data-aos-duration="750">
+        <div class="input_field">
+          <span>Name</span>
+          <input type="text">
+        </div>
+        <hr>
+        <div class="input_field">
+          <span>University/Campus/College</span>
+          <select name="" id="">
+            <option value="">Ayeduase</option>
+            <option value="">Ejisu</option>
+            <option value="">Asafo</option>
+          </select>
+        </div>
+        <hr>
+        <div class="input_field">
+          <span>Location</span>
+          <select name="" id="">
+            <option value="">Ayeduase</option>
+            <option value="">Ejisu</option>
+            <option value="">Asafo</option>
+          </select>
+        </div>
+        <hr>
+        <div class="input_field">
+          <span>Ratings</span>
+          <select name="" id="">
+            <option value="">3+</option>
+            <option value="">4+</option>
+            <option value="">4.5+</option>
+          </select>
+        </div>
+        <hr>
+        <div class="input_field">
+          <button class="material-symbols-outlined">search</button>
+        </div>
+      </form>
+      <a class="user_box" href="dashboard.html">  
+        <img src="images/hostel.webp" alt="">
+        <p>
+          <span>Hi</span>
+          <span>A Mole</span>
+        </p>
+      </a>
+    </section>
+    <section class="b_top">
+      <div id="p1">
+        <span id="title">Glory Heights</span>
+        <div id="p2">
+          <p>
+            <i class="material-symbols-outlined" style="color: orange;">star</i>
+            <span>4.5</span>
+          </p>
+          <p>
+            <i class="material-symbols-outlined" style="color: skyblue;">supervisor_account</i>
+            <span>Aban Hostels</span>
+          </p>
+          <p>
+            <i class="material-symbols-outlined" style="color: salmon;">pin_drop</i>
+            <span>Ayeduase</span>
+          </p>
+        </div>
+      </div>
+      <div id="p2">
+        <p>
+          <i class="material-symbols-outlined">ios_share</i>
+          <span>share</span>
+        </p>
+        <p>
+          <i class="material-symbols-outlined">favorite</i>
+        </p>
+      </div>
+    </section>
+    <section class="hostel_gallery">
+      <div class="top hg_topSwiper swiper">
+        <div class="swiper-wrapper">
+          <img src="images/home.jpg" class="swiper-slide">
+          <img src="images/hos5.avif" class="swiper-slide">
+        </div>
+        <nav>
+          <button class="material-symbols-outlined hg_topSwiper_prev">arrow_back</button>
+          <hr>
+          <button class="material-symbols-outlined hg_topSwiper_next">arrow_forward</button>
+        </nav>
+      </div>
+      <div class="low">
+        <img src="images/gall12.avif" alt="">
+        <img src="images/gall7.avif" alt="">
+      </div>
+    </section>
+    <section class="hostel_info">
+      <p>
+        <strong>Room Count</strong>
+        <span>45 Rooms</span>
+      </p>
+      <hr>
+      <p>
+        <strong>self Metred</strong>
+        <i class="material-symbols-outlined">power</i>
+      </p>
+      <hr>
+      <p>
+        <strong>Internet access</strong>
+        <i class="material-symbols-outlined">wifi</i>
+      </p>
+      <hr>
+      <p>
+        <strong>5km From SG Mall</strong>
+        <i class="material-symbols-outlined">my_location</i>
+      </p>
+    </section>
+    <section class="main">
+      <div  class="h_card">
+        <p id="h_card_pin">
+          <span>Ayeduase</span>
+          <i class="material-symbols-outlined">pin_drop</i>
+        </p>
+        <p id="h_card_ratings">
+          <i class="material-symbols-outlined">star</i>
+          <span>4.1</span>
+        </p>
+        <a href="book.html" class="link_box">
+          <div id="link"><p><i class="material-symbols-outlined">book</i> Book Now  </p></div>
+          <img src="images/gall10.avif" alt="">
+        </a>
+        <div class="h_card_info">
+          <p>
+            <span id="s1">Glory Heights,</span>
+            <span>Kumasi</span>
+          </p>
+          <i id="h_card_like" class="fa-regular fa-heart"></i>
+          <p>
+            <span id="s1">Ghc 6,000</span>
+            <span>2 in room</span>
+          </p>
+        </div>
+      </div>
+      <div  class="h_card">
+        <p id="h_card_pin">
+          <span>Ayeduase</span>
+          <i class="material-symbols-outlined">pin_drop</i>
+        </p>
+        <p id="h_card_ratings">
+          <i class="material-symbols-outlined">star</i>
+          <span>4.1</span>
+        </p>
+        <a href="" class="link_box">
+          <div id="link"><p><i class="material-symbols-outlined">book</i> Book Now  </p></div>
+          <img src="images/gall3.avif" alt="">
+        </a>
+        <div class="h_card_info">
+          <p>
+            <span id="s1">Glory Heights,</span>
+            <span>Kumasi</span>
+          </p>
+          <i id="h_card_like" class="fa-regular fa-heart"></i>
+          <p>
+            <span id="s1">Ghc 6,000</span>
+            <span>2 in room</span>
+          </p>
+        </div>
+      </div>
+      <div  class="h_card">
+        <p id="h_card_pin">
+          <span>Ayeduase</span>
+          <i class="material-symbols-outlined">pin_drop</i>
+        </p>
+        <p id="h_card_ratings">
+          <i class="material-symbols-outlined">star</i>
+          <span>4.1</span>
+        </p>
+        <a href="" class="link_box">
+          <div id="link"><p><i class="material-symbols-outlined">book</i> Book Now  </p></div>
+          <img src="images/gall4.avif" alt="">
+        </a>
+        <div class="h_card_info">
+          <p>
+            <span id="s1">Glory Heights,</span>
+            <span>Kumasi</span>
+          </p>
+          <i id="h_card_like" class="fa-regular fa-heart"></i>
+          <p>
+            <span id="s1">Ghc 6,000</span>
+            <span>2 in room</span>
+          </p>
+        </div>
+      </div>
+      <div  class="h_card">
+        <p id="h_card_pin">
+          <span>Ayeduase</span>
+          <i class="material-symbols-outlined">pin_drop</i>
+        </p>
+        <p id="h_card_ratings">
+          <i class="material-symbols-outlined">star</i>
+          <span>4.1</span>
+        </p>
+        <a href="" class="link_box">
+          <div id="link"><p><i class="material-symbols-outlined">book</i> Book Now  </p></div>
+          <img src="images/gall6.avif" alt="">
+        </a>
+        <div class="h_card_info">
+          <p>
+            <span id="s1">Glory Heights,</span>
+            <span>Kumasi</span>
+          </p>
+          <i id="h_card_like" class="fa-regular fa-heart"></i>
+          <p>
+            <span id="s1">Ghc 6,000</span>
+            <span>2 in room</span>
+          </p>
+        </div>
+      </div>
+      <div  class="h_card">
+        <p id="h_card_pin">
+          <span>Ayeduase</span>
+          <i class="material-symbols-outlined">pin_drop</i>
+        </p>
+        <p id="h_card_ratings">
+          <i class="material-symbols-outlined">star</i>
+          <span>4.1</span>
+        </p>
+        <a href="" class="link_box">
+          <div id="link"><p><i class="material-symbols-outlined">book</i> Book Now  </p></div>
+          <img src="images/gall3.avif" alt="">
+        </a>
+        <div class="h_card_info">
+          <p>
+            <span id="s1">Glory Heights,</span>
+            <span>Kumasi</span>
+          </p>
+          <i id="h_card_like" class="fa-regular fa-heart"></i>
+          <p>
+            <span id="s1">Ghc 6,000</span>
+            <span>2 in room</span>
+          </p>
+        </div>
+      </div>
+      <div  class="h_card">
+        <p id="h_card_pin">
+          <span>Ayeduase</span>
+          <i class="material-symbols-outlined">pin_drop</i>
+        </p>
+        <p id="h_card_ratings">
+          <i class="material-symbols-outlined">star</i>
+          <span>4.1</span>
+        </p>
+        <a href="" class="link_box">
+          <div id="link"><p><i class="material-symbols-outlined">book</i> Book Now  </p></div>
+          <img src="images/gall3.avif" alt="">
+        </a>
+        <div class="h_card_info">
+          <p>
+            <span id="s1">Glory Heights,</span>
+            <span>Kumasi</span>
+          </p>
+          <i id="h_card_like" class="fa-regular fa-heart"></i>
+          <p>
+            <span id="s1">Ghc 6,000</span>
+            <span>2 in room</span>
+          </p>
+        </div>
+      </div>
+      <div  class="h_card">
+        <p id="h_card_pin">
+          <span>Ayeduase</span>
+          <i class="material-symbols-outlined">pin_drop</i>
+        </p>
+        <p id="h_card_ratings">
+          <i class="material-symbols-outlined">star</i>
+          <span>4.1</span>
+        </p>
+        <a href="" class="link_box">
+          <div id="link"><p><i class="material-symbols-outlined">book</i> Book Now </p></div>
+          <img src="images/gall3.avif" alt="">
+        </a>
+        <div class="h_card_info">
+          <p>
+            <span id="s1">Glory Heights,</span>
+            <span>Kumasi</span>
+          </p>
+          <i id="h_card_like" class="fa-regular fa-heart"></i>
+          <p>
+            <span id="s1">Ghc 6,000</span>
+            <span>2 in room</span>
+          </p>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/index.js"></script>
+  <script>
+    var hg_topSwiper = new Swiper('.hg_topSwiper', {
+      direction: 'horizontal',
+      loop: true,
+      autoplay:{
+        delay: 3000
+      },
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      speed:1500,
+      // Navigation arrows
+      navigation: {
+        nextEl: '.hg_topSwiper_next',
+        prevEl: '.hg_topSwiper_prev',
+      },
+    });
+  </script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
